@@ -33,7 +33,7 @@
     <header class="header_area">
       <div class="main-menu">
         <nav class="navbar navbar-expand-lg navbar-light">
-          <a class="navbar-brand" href="#about-me"
+          <a class="navbar-brand" href="profile-card.html"
             ><img src="img/Logo.svg" alt="logo"
           /></a>
           <button
@@ -58,8 +58,8 @@
                   Teori Bahasa dan Otomata
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="tasks1.html">Pengantar TBO</a>
-                  <a class="dropdown-item " href="tasks2.html">Notasi Big-O</a>
+                  <a class="dropdown-item" href="task1.html">Pengantar TBO</a>
+                  <a class="dropdown-item " href="task2.html">Notasi Big-O</a>
                 </div>
               <li class="nav-item">
                 <a class="nav-link" href="contact.html">Contact</a>
@@ -71,8 +71,180 @@
     </header>
     <!-- End Header Area -->
 
+     <!-- Start Main Area -->
+     <main class="site-main">
+       <br>
+      <div class="container" data-aos="zoom-in" data-aos-duration="3000" align="center">
+        <img src="img/ha2.PNG" width="100%" height="80%" style="display: block; margin: auto;"><br>
+    </div>
+      <br>
+      <hr color="purple" size="50" noshade align="center" width="900px"><br>
+      <div class="container mb-5" data-aos="zoom-in" data-aos-duration="1000">
+        <img src="img/panah.png" width="5%" height="5%" style="display: block; margin: auto;"> </div>
+      <!-- my Tasks -->
+      
+      <section class="nomor1">
+        <div class="container">
+         
+          <p class="text-uppercase text-center title-text">
+            <b>Definisi BIG O</b>
+          </p>
+              <p style="text-align:justify;">
+                Suatu baris kode yang kita ciptakan dapat dilihat kinerja dan keefektivannya dalam memecahkan masalah yang ingin kita pecahkan, maka kita butuh sebuah metodologi untuk menghitungnya. metodologi untuk menghitungnya yaitu dengan notasi O besar atau <i>Big-O Notation</i>.
+              </p>
+              <p>
+                <strong><h3>Apa itu Notasi Big-O?</h3></strong>
+              </p>
+              <p style="text-align:justify;">
+                ​Notasi Big O (<I>Big-O Notation</I>) adalah cara untuk mengkonversi keseluruhan langkah-langkah suatu algoritma kedalam bentuk Aljabar, yaitu dengan menghiraukan konstanta yang lebih kecil dan koefisien yang tidak berdampak besar terhadap keseluruhan kompleksitas permasalahan yang diselesaikan oleh algoritma tersebut.
+                <br>
+                <img src="img/run.png" alt="run" height="290" width="350" align="left"/>
+              <p style="text-align:justify;">Setiap programmer yang baik akan menggunakan cara yang paling efektif dan efisien dalam menyelesaikan suatu permasalahan. Dan untuk bisa melakukan hal tersebut, kita harus bisa meminimalisir kompleksitas dari algoritma yang kita gunakan.
+              </p>
+              <p style="text-align:justify;">  
+              <i>Kompleksitas suatu algoritma dibagi menjadi 2, yaitu <b>Time Complexity</b> dan <b>Space Complexity</b>. Adapun penjelasannya sebagai berikut:</i><br>
+                <ul style="text-align: justify;">
+                  <li><i><b>Time Complexity</b></i> adalah seberapa lama waktu yang diperlukan untuk menjalankan suatu algoritma. Time Complexity Analysis adalah suatu cara sederhana untuk mengetahui berapa lama waktu yang dibutuhkan untuk menjalankan suatu algoritma dengan input tertentu (n).</li>
+                  <li><i><b>Space Complexity</b></i> adalah seberapa besar memori yang kita gunakan untuk menjalankan suatu algoritma. Dan disini kita hanya akan membahas tentang Time Complexity.</li>
+                </ul>
+              <p style="text-align:justify;">
+                <b>Notasi O besar</b>​ merupakan skenario terburuk dari sebuah algoritma, dan biasanya terdapat notasi n yang merepresentasikan jumlah masukan. Berikut adalah diagram notasi O besar dengan masukan yang dimulai dari 0 hingga tak terhingga.
+                <br><br>
+                <img src="img/b1.png" width="45%" height="45%" style="display: block; margin: auto;">
+                <br>
+                <img src="img/b2-.jpg" width="70%" height="70%" style="display: block; margin: auto;">
+                <br>
+                <hr color="purple" size="50" noshade align="center">
+        </div>
+
+        <section class="nomor2">
+          <div class="container">
+           
+            <br>
+            <p class="text-uppercase text-center title-text">
+              <b>Kegunaan Notasi BIG O</b>
+            </p>
+                <p style="text-align:justify;">
+                  <img src="img/lap.jpg" alt="b4" height="300" width="380" style="float: right";/>
+                  Notasi Big-O digunakan untuk mengukur tingkat kompleksitas suatu algoritma demi mengefisienkan algoritma itu sendiri. Notasi Big-O juga dapat merepresentasikan laju pertumbuhan (<i>growth rate</i>). selain daripada itu, Notasi Big-O juga berguna untuk membandingkan beberapa algoritma untuk masalah yang sama demi menentukan yang terbaik. contohnya seperti masalah pengurutan yang memiliki banyak metode/algoritma penyelesaian. Seperti pada:
+                  <ul style="text-align: justify;">
+                    <li><i>Selection sort, Insertion sort T(n) = O(n2)</i></li>
+                    <li><i>Quick sort T(n) = O (n log n)</i></li>
+                  </ul>
+                  <p style="text-align:justify;">
+                    karena n log n < n2 untuk n yang besar, maka algoritma <I>quick sort</I> lebih cepat (lebih baik) daripada algoritma <i>selection sort</i> ataupun <I>insertion sort</I>.
+                  Jadi, nantinya kompleksitas algoritma akan dinilai dengan Notasi Big O yang terdiri dari seberapa lama algoritma itu berjalan (<i>time complexity</i>), dan seberapa banyak memori yang akan dipakai oleh algoritma itu (<i>space complexity</i>).
+Dengan memahami <i>Big-O Notation</i>, kita akan lebih mudah dalam melihat mana algoritma yang lebih efisien yang bisa kita gunakan untuk menyelesaikan permasalahan yang sedang dihadapi.
+                </p>
+                  <br>
+                  <hr color="purple" size="50" noshade align="center">
+          </div>
 
 
+          <!-- nomor 3 -->
+      <section class="nomor3">
+        <div class="container">
+          <br>
+          <h6 class="text-uppercase text-center title-text">
+            <b>Contoh Notasi Big O</b>
+          </h6>
+          <br>
+          <p  style="text-align:center;">
+            Notasi Big O bisa dicontohkan seperti: O(1), O(N), O(N^2), O(N^3), O(sqrt(N)), O(log N), O(N log N), O(N!), O(2^N). 
+            <br><br>
+            <img src="img/o1.png" width="45%" height="45%" style="display: block; margin: auto;"> <br>
+            Untuk lebih jelasnya, dapat dilihat penjabaran beberapa macam contoh Notasi Big O, diantaranya yaitu: <br>
+          </p>
+
+          <div class="row">
+            <div class="col-md-4">
+              <div class="services-box">
+                <p class="para">
+                  <p style="text-align: center;"><b><u>CONSTANT TIME</u></b></p>
+                  <P style="text-align: justify;"><i>Constant Time artinya banyaknya input yang diberikan kepada sebuah algoritma, tidak akan mempengaruhi waktu proses (runtime) dari algoritma tersebut, misalnya saja O(1). Kecepatan program yang diinginkan seorang programmer adalah O(1) yang maksudnya bagaimanapun kompleksnya suatu program kecepatannya tetap sama yaitu O(1). Jumlah input yang diberikan tidak akan mempengaruhi waktu proses (runtime) dari algoritma tersebut. Contoh: </i><br></P>
+                  <img src="img/1.PNG" alt="run" height="100" width="200" style="display: block; margin: auto;"/>
+                  <p style="text-align: justify;"><i>Fungsi diatas memiliki time complexity O(1) dikarenakan ia hanya menjalankan sekali instruksi return, berapapun input yang dimasukkan kedalam fungsi.</i></p>
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="services-box">
+                <p class="para">
+                  <p style="text-align: center;"><b><u>LINEAR TIME</u></b></p>
+                  <P style="text-align: justify;"><i>Linear Time adalah ketika runtime dari fungsi kita berbanding lurus dengan jumlah input yang diberikan, yaitu O(n). Adapun contoh programnya yaitu:</i><br></P>
+                  <img src="img/2.PNG" alt="run" height="210" width="335" style="display: block; margin: auto;"/>
+                  <p style="text-align: justify;"><i>Fungsi diatas memiliki time complexity O(n) dikarenakan ia akan menjalankan looping untuk menjumlahkan bilangan-bilangan yang ada didalam array. Jumlah loopingnya bergantung pada panjang array yang dimasukkan kedalam fungsi.
+                  </i></p>
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="services-box">
+                <p class="para">
+                  <p style="text-align: center;"><b><u>LOGARITHMIC TIME</u></b></p>
+                  <P style="text-align: justify;"><i>Logarithmic Time artinya ketika kita memberikan input sebesar n terhadap sebuah fungsi, jumlah tahapan yang dilakukan oleh fungsi tersebut berkurang berdasarkan suatu faktor, yaitu O(log n). Salah satu contohnya adalah algoritma binary search. Contoh programnya yaitu:</i><br></P>
+                  <img src="img/bin.PNG" alt="run" height="300" width="350" style="display: block; margin: auto;"/>
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="services-box">
+                <p class="para">
+                  <p style="text-align: center;"><b><u>QUADRATIC TIME</u></b></p>
+                  <P style="text-align: justify;"><i>Quadratic Time adalah ketika runtime dari fungsi kita adalah sebesar n², dimana n adalah jumlah input dari fungsi tersebut, yaitu O(n²). Hal tersebut bisa terjadi karena kita menjalankan fungsi linear didalam fungsi linear (n*n). Adapun contoh programnya yaitu:</i><br></P>
+                  <img src="img/3.PNG" alt="run" height="180" width="300" style="display: block; margin: auto;"/>
+                  <p style="text-align: justify;"><i>Ketika i = 1 maka akan dijalankan 1 kali, ketika i = 2 maka akan dijalankan 2 kali, ketika i = 3 maka akan dijalankan 3 kali dan seterusnya… Sehingga, count++; akan dijalankan sebanyak (n² + n)/2. Maka time complexity-nya O(n²).</i></p>
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="services-box">
+                <p class="para">
+                  <p style="text-align: center;"><b><u>EXPONENTIAL TIME</u></b></p>
+                  <P style="text-align: justify;"><i>Exponential Time biasanya digunakan dalam situasi dimana kita tidak terlalu tahu terhadap permasalahan yang dihadapi, sehingga mengharuskan kita mencoba setiap kombinasi dan permutasi dari semua kemungkinan, yaitu O(2­­^n). Adapun contoh programnya yaitu:</i><br></P>
+                  <img src="img/4.PNG" alt="run" height="180" width="350" style="display: block; margin: auto;"/>
+                  <p style="text-align: justify;"><i>Ketika i = 1 maka akan dijalankan 1 kali, ketika i = 2 maka akan dijalankan 2 kali, ketika i = 3 maka akan dijalankan 3 kali dan seterusnya. Sehingga, count++; akan dijalankan sebanyak (n² + n)/2. Maka time complexity-nya O(n²).</i></p>
+                </p>
+              </div>
+            </div>
+          </div>
+          <br><br>
+          <hr color="purple" size="50" noshade align="center">
+
+          <br>
+      <h3 class="text-uppercase text-center title-text">
+        <b>Referensi</b>
+      </h3>
+      <br>
+      <p class="text-center" style="text-align:justify;">
+        <a href="https://www.sixv.com/algoritma/algoritma-notasi-big-o/">Sixv.com: Algoritma - Notasi Big-O</a>
+      </p>
+      <p class="text-center" style="text-align:justify;">
+        <a href="http://dev.bertzzie.com/knowledge/analisis-algoritma/KompleksitasAlgoritma.html">Alex Xandra Albert Sim: Kompleksitas Algoritma</a>
+      </p>
+      <p class="text-center" style="text-align:justify;">
+        <a href="https://medium.com/bee-solution-partners/penjelasan-sederhana-tentang-time-complexity-dan-big-o-notation-4337ba275cfe#:~:text=Big%2DO%20Notation%20adalah%20cara,yang%20diselesaikan%20oleh%20algoritma%20tersebut.">Asep Maulana Ismail: Penjelasan Sederhana Tentang Time Complexity dan Big-O Notation</a>
+      </p>
+      <p class="text-center" style="text-align:justify;">
+        <a href="https://medium.com/better-programming/understanding-big-o-notation-c3245b8112dc">Bonvic Bundi: Understanding Big-O Notation With JS</a>
+      </p>
+      <p class="text-center" style="text-align:justify;">
+        <a href="https://docplayer.info/35187873-Penggunaan-big-o-notation-untuk-menganalisa-efisiensi-algoritma.html">Ikhsan Fanani: Penggunaan Big O Notation untuk Menganalisa Efisiensi Algoritma</a>
+      </p>
+      <p class="text-center" style="text-align:justify;">
+        <a href="https://rizafahmi.com/2020/03/21/notasi-o-besar-big-o-notation/">Rizafahmi: Notasi O Besar atau Big O Notation</a>
+      </p>
+        </div>
+      </section>
+
+      <br><br><br>
+      <hr color="purple" size="50" noshade align="center" width="90px">
+
+    
     <footer class="footer-area">
       <div class="container">
         <div class="logo-footer">
@@ -93,7 +265,7 @@
           </div>
           <div class="copyrights text-center">
             <p class="para">
-              © SRI RAHAYU INDAL FATRA, 2020 - TBO
+              <B>© SRI RAHAYU INDAL FATRA, 2020</B>
             </p>
           </div>
         </div>
