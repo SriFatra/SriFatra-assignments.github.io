@@ -44,14 +44,6 @@ body {
   border-radius: 4px;
 }
 
-.button.primary-button {
-  background: var(--gradient-color);
-  background-clip: padding-box;
-  color: whitesmoke;
-  transition: background 0.6s ease;
-  box-shadow: var(--box-shadow);
-}
-
 .button.primary-button:hover {
   background: whitesmoke;
   background-clip: padding-box;
@@ -101,7 +93,7 @@ button:active button:hover .btn:active,
 }
 
 .title-h1 {
-  font: normal bold 39px/ 40px var(--roboto);
+  font: normal bold 35px/ 38px var(--roboto);
 }
 
 .navbar_fixed {
@@ -516,50 +508,6 @@ footer.footer-area .social a:hover > i {
 .about-me h4 {
   font-size: 24px;
   font-family: var(--roboto-cursive);
-}
-
-.about-me .skills-bar p {
-  margin-bottom: 6px;
-  font-weight: 600;
-  font-family: var(--roboto-cursive);
-}
-
-.progress {
-  border-radius: 16px !important;
-  margin-bottom: 10px;
-}
-
-.progress-bar {
-  border-radius: 16px;
-  background: var(--gradient-color) !important;
-  font-family: var(--roboto-cursive);
-}
-/* End AboutMe */
-
-/* Start Experience */
-.resume-area {
-  margin-top: 40px;
-}
-
-.resume {
-  padding-top: 50px;
-  padding-bottom: 30px;
-  background: #d1d1e9;
-}
-
-.resume h3 {
-  font-size: 45px;
-  font-family: var(--roboto-cursive);
-  margin-bottom: 50px;
-}
-
-.resume h4 {
-  font-size: 24px;
-  font-family: var(--roboto-cursive);
-}
-
-.resume p {
-  font-family: var(--roboto);
 }
 
 .timeline {
