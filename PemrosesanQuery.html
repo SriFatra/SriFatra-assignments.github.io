@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- Icon Web -->
+    <link rel="icon" href="img/favicon.png" />
+    <title>Pemrosesan Query - AyuFatra</title>
+
+    <!-- Bootstrap CSS file -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- Font Awesome Icons CSS file -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- Custom CSS file -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Responsive CSS file -->
+    <link rel="stylesheet" href="css/responsive.css" />
+    <!-- Aos Animate -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Start Preloader Area -->
+    <div class="preloader-area">
+      <div class="ring-loader">
+        Loading
+        <span class="span-ring"></span>
+      </div>
+    </div>
+    <!-- End Preloader Area -->
+
+    <!-- Start Header Area -->
+    <header class="header_area">
+      <div class="main-menu">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <a class="navbar-brand" href="profile-card.html"
+            ><img src="img/Logo.svg" alt="logo"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="mr-auto"></div>
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Basis Data II
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="PemrosesanQuery.html">Pemrosesan Query </a>
+                  <a class="dropdown-item " href="EvaluationPlan.html">Evaluation Plan</a>
+                </div>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- End Header Area -->
+
+    <!-- Start Main Area -->
+    <main class="site-main"><br>
+      <div class="container" data-aos="zoom-in" data-aos-duration="3000" align="center">
+        <img src="img/DB1.PNG" width="100%" height="80%" style="display: block; margin: auto;"><br>
+    </div>
+      
+      <br>
+          <hr color="purple" size="50" noshade align="center" width="900px"><br>
+          <div class="container mb-5" data-aos="zoom-in" data-aos-duration="1000">
+            <img src="img/panah.png" width="5%" height="5%" style="display: block; margin: auto;"><br>
+        </div>
+          
+      <!-- my Tasks -->
+      <section class="nomor1">
+        <div class="container">
+         
+          <p class="text-uppercase text-center title-text">
+            <b>Apa itu <i>Query</i>?</b>
+          </p>
+              <p style="text-align:justify;">
+                Query dapat diartikan sebagai <i>capability</i> (kemampuan) database pada komputer untuk menampilkan/menyimpan informasi tertentu. Namun perlu diketahui bahwa kemampuan tersebut hanya berupa <i>pre-defined code</i> artinya jika permintaan tidak sesuai dengan informasi yang tersimpan di database, maka permintaan tidak dapat diproses.
+                Umumnya <i>Query</i> dibagi dalam dua jenis yaitu:<br></p>
+                <ul style="text-align: justify;">
+                  <li><i><b>Select Query</b></i> <br>merupakan permintaan atas suatu informasi yang tersimpan dalam database.</li>
+                  <li><i><b>Action Query</b></i> <br>merupakan kegiatan <i>updating</i> (pembaharuan), <i>insert</i> (penambahan) maupun penghapusan sebagian atau keseluruhan informasi dalam database.</li>
+                </ul>
+              <p style="text-align:justify;">
+              <i>Query</i> mampu memenuhi permintaan dan penyimpanan data dari banyak pengguna, itu sebabnya <i>Query</i> disebut sebagai bagian terpenting pada proses pengolahan <i>database</i>. Adapun <i>Structure Query Language</i> (SQL) merupakan bahasa <i>Query</i> yang menjadi standar manajemen . SQL ini sedang populer di kalangan <i>Database Administrator</i> (DBA).</p>
+              
+              <p>
+                <strong style="color:rebeccapurple"><h3>Fungsi Komponen <i>Query</i></h3></strong>
+              </p>
+              <p style="text-align:justify;">
+                ​Beberapa penjelasan diatas menerangkan apa itu query, kemudian disini kami akan membagikan beberapa fungsi query dalam SQL. Dalam database tiap komponen dapat saling berinteraksi, adapun komponen-komponen tersebut yakni:<br>
+                <ul style="text-align: justify;">
+                  <li><i><b>Data Definition Language (DDL)</b></i> <br>Berfungsi sebagai mendefinisi data yang terdapat dalam database. Komponen ini berisi perintah yang terdiri dari DROP, ALTER, CREATE.</li>
+                  <li><i><b>Data Control Language (DCL)</b></i> <br>Data Control Language memiliki fungsi dalam database untuk memberi hak akses bagi user. Komponen ini berisi perintah yakni REVOKE.</li>
+                  <li><i><b>Data Manipulation Language (DML)</b></i> <br>Data Manipulation Language berfungsi untuk mengubah/menambah value dari table tertentu yang terdapat dalam database. Komponen ini berisi perintah yang terdiri dari UPDATE, INSERT, SELECT dan DELETE.
+                  </li>
+                </ul>
+              </p>
+              
+              <p>
+                <strong style="color:rebeccapurple"><h3>Cara Kerja Query Database</h3></strong>
+              </p>
+              <p style="text-align:justify;">
+                <img src="img/query1.png" alt="run" height="400" width="480" align="right"/>
+                Query bekerja dengan memasukkan arti ke dalam kode yang menggunakan SQL atau software lain. Perlu diketahui bahwa selama memakai bahasa yang sama, baik user ataupun database keduanya bisa saling bertukar informasi.<br>
+                Query bukanlah satu-satunya pilihan untuk request data, melainkan ada beberapa metode yang ditawarkan oleh software/platform lainnya. Disini kami akan memberikan beberapa penjelasan tentang beberapa cara yang sering digunakan, antara lain:
+                <ul style="text-align: justify;">
+                  <li><i><b>Query by example</b></i> <br>Ada beberapa area kosong serta seperangkat kode yang ditampilkan oleh sistem, maka pada area kosong tersebut Anda bisa mengisi value dan field data.</li>
+                  <li><i><b>Bahasa Query</b></i> <br>Data dapat dimanipulasi bilamana sedari awal Anda mengisi query. Anda juga harus memahami bahasa query yang terdapat pada software yang sedang digunakan.</li>
+                  <li><i><b>Parameter</b></i> <br>Ada banyak daftar parameter yang dimiliki oleh software di bagian menunya. Salah satu dari daftar itu dapat dipilih user, untuk langkah selanjutnya Anda akan dipandu sistem, dan terakhir user akan mendapat output sesuai dengan ekspektasi.</li>
+                </ul>
+              </p>
+
+              <p>
+                <strong style="color:rebeccapurple"><h3>Contoh Query Database</i></h3></strong>
+              </p>
+              <p style="text-align:justify;">
+                Setelah menjelaskan apa itu query serta bagaimana cara kerja query, di bawah ini kami akan memberikan beberapa contoh query database. Berikut penjelasannya:<br>
+                <ol style="text-align: justify;">
+                  <li><i><b>CREATE</b></i> <br>Kegunaan CREATE adalah sebagai berikut:
+                    <ul style="text-align: justify;">
+                      <li>Membuat Table (CREATE TABLE namaTable)</li>
+                      <li>Database (CREATE DATABASE namaDatabase)</li>
+                      <li>Index (CREATE [UNIQUE]  INDEX namaIndex ON namaTable (namaKolom))</li>
+                      <li>View (CREATE VIEW namaView AS SELECT STATEMENT FROM namaTable)</li>
+                    </ul>
+                  </li>
+                  <li><i><b>SELECT</b></i> <br>Kegunaan SELECT adalah menampilkan table dalam database.
+                    <ul style="text-align: justify;">
+                      <li>Bentuk umum (SELECT namaKolom FROM namaTable WHERE [condition])</li>
+                      <li>Menunjukkan data yang terdapat pada kolom tertentu (SELECT namaKolom1, namaKolom2 FROM namaTable)</li>
+                      <li>Menampilkan data yang terdapat pada kolom dan kondisi tertentu (SELECT namaKolom1, namaKolom2 WHERE kondisi)</li>
+                      <li>Menampilkan data secara keseluruhan dalam Table (SELECT * FROM namaTable)</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <i><b>ALTER</b></i> <br>Kegunaan ALTER adalah untuk mengubah atau mengganti table (ALTER TABLE namaTable alter_option)
+                  </li>
+                  <li>
+                    <i><b>DROP</b></i> <br>Kegunaan DROP yakni untuk menghapus data dalam database (DROP DATABASE namaDatabase) dan untuk menghapus table (DROP TABLE namaTable)
+                  </li>
+                  <li>
+                    <i><b>DELETE</b></i> <br>Kegunaan DELETE yakni untuk menghapus data yang terdapat pada table (DELETE namaTable WHERE kondisi)
+                  </li>
+                  <li><i><b>INSERT</b></i> <br>Kegunaan INSERTadalah memanipulasi data yang tersimpan pada table.
+                    <ul style="text-align: justify;">
+                      <li>Bentuk Umum (INSERT INTO namaTable VALUES)</li>
+                      <li>Menambah baris pada kolom tertentu yang terdapat pada table (INSERT INTO namaTable (namaKolom) VALUES (“isiKolom”))</li>
+                      <li>Menambahkan Data Lebih dari Satu Baris dalam Table (INSERT INTO namaTable VALUES (“isiKolom1, isiKolom2, isiKolom3, dst”)</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <i><b>UPDATE</b></i> <br>Kegunaan UPDATE yaitu untuk mengubah isi sebuah table (UPDATE namaTable).
+                  </li>
+                </ol>
+              </p>
+              <Br>
+              <hr color="purple" size="50" noshade align="center" width="900px">
+
+  
+        <br>
+        <p class="text-uppercase text-center title-text">
+            <b>PENGUKURAN BIAYA QUERY</b>
+        </p>
+        <p style="text-align:justify;">
+          Biaya evaluasi query dapat diukur dari banyaknya sumber daya (resource) sistem yang terpakai,
+          meliputi pengaksesan disk, waktu CPU mengerjakan query, dan untuk sistem basis data paralel atau
+          terdistribusi. Meskipun sistem dapat membuat beberapa rencana untuk sebuah query, metode yang dipilih haruslah yang terbaik dari semuanya. Ini dapat dilakukan dengan membandingkan setiap rencana yang mungkin dalam hal perkiraan biayanya. Untuk menghitung perkiraan biaya bersih dari rencana apa pun, biaya setiap operasi dalam rencana harus ditentukan dan digabungkan untuk mendapatkan perkiraan biaya bersih dari rencana evaluasi query.<br></p>
+          <p>
+            <strong style="color:rebeccapurple"><h3>Estimasi Biaya Query</i></h3></strong>
+          </p>
+          <p style="text-align:justify;">
+            Untuk memperkirakan biaya rencana evaluasi query, kita dapat menggunakan jumlah blok yang ditransfer dari disk, dan jumlah disk yang dicari. Misalkan disk memiliki waktu akses blok rata-rata ts detik dan membutuhkan rata-rata tT detik untuk mentransfer x blok data. Waktu akses blok adalah jumlah waktu pencarian disk dan latensi rotasi. Ia melakukan pencarian S daripada waktu yang dibutuhkan akan menjadi b * tT + S * tS detik. Jika tT = 0.1 ms, tS = 4 ms, ukuran blok adalah 4 KB, dan kecepatan transfernya adalah 40 MB per detik. Dengan ini, kita dapat dengan mudah menghitung perkiraan biaya dari rencana evaluasi queri yang diberikan.<br></p>
+        <p style="text-align: justify;">
+          Optimizer query akan membuat informasi statistik yang tersimpan dalam katalog DBMS untuk memperkirakan besarnya biaya dari sebuah rencana query. Ada tiga aspek dasar yang ditetapkan dan mempengaruhi optimisasi query, yaitu : search space, cost model dan search strategy.<br></p>
+          <div class="row">
+          <div class="col-md-4">
+            <div class="services-box">
+              <p class="para">
+                <p style="text-align: center;"><b><u>Search Space</u></b></p>
+                <P style="text-align: justify;"><i>merupakan sekumpulan rencana-rencana akses yang sama secara logika yang dapat digunakan untuk mengevaluasi sebuah query. Semua rencana-rencana dalam search space query mengembalikan hasil yang sama biarpun beberapa rencana lebih efisien dibandingkan dengan rencana yang lainnya.</i><br></P>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="services-box">
+              <p class="para">
+                <p style="text-align: center;"><b><u>Cost model</u></b></p>
+                <P style="text-align: justify;"><i>merupakan harga untuk tiap rencana dalam search space. Harga dari rencana tersebut adalah sebuah perkiraan dari sumber-sumber yang digunakan pada saat rencana dijalankan, dimana harga yang lebih rendah, merupakan yang terbaik dari rencana-rencana yang ada.</i><br></P>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="services-box">
+              <p class="para">
+                <p style="text-align: center;"><b><u>Search strategy</u></b></p>
+                <P style="text-align: justify;"><i>merupakan sebuah perincian dari rencana-rencana mana dalam search space yang akan diperiksa. Apabila search space-nya kecil, maka strategi yang dapat diteruskan adalah menghitung dan mengevaluasi setiap rencana. Meskipun kebanyakan search space bahkan untuk query-query yang sederhana adalah sangat besar, akan tetapi query optimizer selalu memerlukan aturan heuristik untuk mengontrol nomer dari rencana-rencana yang akan diperiksa.</i><br></P>
+            </div>
+          </div>
+        </div>
+
+        <p style="text-align:justify;">
+          Informasi yang tersimpan yaitu sebagai berikut:<br></p>
+      <ul style="text-align: justify;">
+          <li>Banyaknya baris data (record) dalam sebuah tabel</li>
+          <li>Banyaknya blok berisi baris data dalam tabel</li>
+          <li>Ukuran setiap baris data dari tabel (satuan byte)</li>
+          <li>Banyaknya nilai unik dalam tabel untuk suatu atribut</li>
+      </ul>      
+
+        <p>
+          <strong style="color:rebeccapurple"><h3>Strategi yang dipilih dalam evaluasi query</i></h3></strong>
+        </p>
+        <p style="text-align:justify;">
+          Strategi yang dipilih dalam evaluasi query tergantung pada estimasi biaya dari masing-masing strategi yang ada. Dan Optimizer Query akan membuat informasi statistik yang disimpan dalam katalog DMBS untuk memperkirakan biaya dari sebuah rencana query. Keterangannya sebagai berikut:<br>
+          <ul style="text-align: justify;">
+            <li><i><b>nr:</b></i> Jumlah record dalam tabel r</li>
+            <li><i><b>br:</b></i> Jumlah block yang menampung data pada tabel r</li>
+            <li><i><b>sr:</b></i> Ukuran setiap record dari tabel r (dlm Byte)</li>
+            <li><i><b>fr:</b></i> Blocking factor/jumlah record yg dapat ditampung oleh 1 blok</li>
+            <li><i><b>V(A,r):</b></i> Jumlah nilai unik yang ada pada atribut A di tabel r</li>
+            <li><i><b>SC(A,r):</b></i> rata-rata jumlah record yang memenuhi kondisi kesamaan terhadap atribut A.</li>
+          </ul>
+        </p>
+
+        <p>
+          <strong style="color:rebeccapurple"><h3>Pengukuran Biaya Query</i></h3></strong>
+        </p>
+        <p style="text-align:justify;">
+          Umumnya, untuk memperkirakan biaya, kita mempertimbangkan kasus terburuk yang bisa terjadi. Para pengguna berasumsi bahwa awalnya, data hanya dibaca dari disk. Tetapi harus ada kemungkinan bahwa informasi tersebut sudah ada di memori utama. Namun, pengguna biasanya mengabaikan efek ini, dan karena itulah biaya eksekusi sebenarnya kurang dari nilai yang diperkirakan. Waktu respons, yaitu waktu yang diperlukan untuk melaksanakan rencana, dapat digunakan untuk memperkirakan biaya rencana evaluasi query. Namun karena alasan berikut, menjadi sulit untuk menghitung waktu respons tanpa benar-benar menjalankan rencana evaluasi query:</p>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="services-box">
+                <p class="para">
+                  <P style="text-align: justify;"><i>Saat query memulai eksekusinya, waktu respons menjadi bergantung pada konten yang disimpan di buffer. Tetapi informasi ini sulit untuk diambil kembali ketika query dalam mode dioptimalkan, atau tidak tersedia juga.</i><br></P>
+                </p>
+              </div>
+            </div>
+
+              <div class="col-md-4">
+                <div class="services-box">
+                  <p class="para">
+                    <P style="text-align: justify;"><i>Ketika sistem dengan banyak disk ada, waktu respon bergantung pada interogasi bahwa dengan "cara akses didistribusikan di antara disk?". Sulit untuk memperkirakan tanpa memiliki pengetahuan rinci tentang tata letak data yang ada di atas disk.</i><br></P>
+                  </p>
+                </div>
+              </div>
+            
+                <div class="col-md-4">
+                  <div class="services-box">
+                    <p class="para">
+                      <P style="text-align: justify;"><i>Akibatnya, alih-alih meminimalkan waktu respons untuk rencana evaluasi queri apa pun, pengoptimal menemukan cara yang lebih baik untuk mengurangi konsumsi sumber daya total rencana queri. Jadi untuk memperkirakan biaya rencana evaluasi queri, ada baiknya untuk meminimalkan sumber daya yang digunakan untuk mengakses disk atau penggunaan sumber daya tambahan.</i><br></P>
+                    </p>
+                  </div>
+                </div>
+                </div>
+      <p style="text-align:justify;">
+        Adapun biaya dari masing-masing operasi query, antar lain:</p>
+        <ol style="text-align: justify;">
+          <li><i><b>Operasi Select</b></i> <br>Biaya operasi select untuk metode akses tertentu adalah sebagai berikut:<br>
+          <img src="img/selec.png">
+          </li>
+
+          <br>
+          <li><i><b>Operasi Project</b></i> <br>Dari operasi diatas, operasi project dengan algoritma sorting memiliki biaya: <br>
+            <b>(NTuples+ SRTuples) + (NPages * 4) + SRTuples</b> <br> Keterangan:
+            <ul>
+              <li>NTuples: Jumlah tuple dalam relasi</li>
+              <li>SRTuple: Ukuran tuple hasil relasi setelah dioperasi</li>
+              <li>NPages: .Iumlah page dalam relasi.</li>
+            </ul>
+            
+          </li>
+          <br>
+          <li><i><b>Operasi Join</b></i> 
+            <div class="row">
+              <div class="col-md-4">
+                <div class="services-box">
+                  <p class="para">
+                    <p style="text-align: center;"><b><u>Page Oriented N-ested Loops Join</u></b></p>
+                    <P style="text-align: justify;"><i>Biaya operasi:<br>
+                      <b>Total Cost = M + M * N</b> <br>
+                       Keterangan :<br>
+                       M = Cost scanning relasi R <br>
+                       N = Cost scanning relasi S</i></P>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="services-box">
+                  <p class="para">
+                    <p style="text-align: center;"><b><u>Sort Merge Join</u></b></p>
+                    <P style="text-align: justify;"><i>Biaya operasi:  
+                      <ul>
+                        <li>Kedua tabel terurut:<br><b>Total Cost = M + N</b></li>
+                        <li>Kedua tabel belum terurut: <br><b>Total Cost = (M + N) + (Sorting R + Sorting S)</b></li>
+                      </ul>
+                      Keterangan :<br>
+                      Sorting R = O ( MlogM )<br>
+                      Sorting S = O ( NlogN )</i></P>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="services-box">
+                  <p class="para">
+                    <p style="text-align: center;"><b><u>Hybrid Hash Join</u></b></p>
+                    <P style="text-align: justify;"><i>  Biaya operasi: <br>
+                      Total Cost: 3 ( M + N )</i><br></P>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ol>
+
+        <Br>
+          <hr color="purple" size="50" noshade align="center" width="900px">
+          <br>
+
+          <p class="text-uppercase text-center title-text">
+            <b>Evaluasi sebuah Expression</b>
+        </p>
+        <p style="text-align:justify;">
+          ​Ekspresi adalah kombinasi dari satu atau beberapa nilai, operator dan fungsi SQL yang mengevaluasi sebuah nilai. EKSPRESI SQL ini seperti rumus dan ditulis dalam bahasa query. Anda juga bisa menggunakannya untuk membuat query database untuk kumpulan data tertentu.​</p>
+        <p>
+        <p style="text-align:justify;">
+          Operator EVALUATE diperkenalkan ke SQL untuk mengevaluasi ekspresi untuk item data tertentu. Semantik operator EVALUATE dapat secara tepat dijelaskan dengan memetakan ekspresi bersyarat dan metadata terkait ke query SQL yang setara. Secara khusus, ekspresi bersyarat dipetakan ke klausa WHERE dari query SQL dan metadata ekspresi yang sesuai menentukan struktur dari klausa FROM query. Operator EVALUATE menunjukkan semantik dari query yang setara dengan mengembalikan 1 untuk ekspresi yang bernilai true untuk item data yang diteruskan</p>
+        <p>
+        <p style="text-align:justify;">
+          <img src="img/ss.jpg" alt="run" height="290" width="500" align="left"/>
+           ​Operator EVALUATE, diperkenalkan untuk mengevaluasi ekspresi, menerima representasi VARCHAR dari ekspresi sebagai argumen pertama dan item data yang ekspresi dievaluasi sebagai argumen kedua. Operator ini mengembalikan 1 atau 0 berdasarkan hasil evaluasi ekspresi. Saat menerapkan operator EVALUATE pada kolom database yang menyimpan ekspresi, metadata kumpulan ekspresi yang sesuai diturunkan dari batasan ekspresi yang ditentukan pada kolom tersebut. Untuk menggunakan operator EVALUATE pada ekspresi transien (tidak disimpan dalam kolom database), nama metadata kumpulan ekspresi yang sesuai harus diteruskan secara eksplisit ke operator melalui argumen VARCHAR tambahan.​</p>
+        <p>
+          <p style="text-align:justify;">
+            Item data yang diteruskan ke operator EVALUATE terdiri dari nilai yang valid untuk semua atribut dasar (atau variabel) dalam metadata kumpulan ekspresi yang sesuai. Item data yang diteruskan ke operator EVALUATE terdiri dari nilai yang valid untuk semua atribut dasar (atau variabel) dalam metadata kumpulan ekspresi yang sesuai. Jadi, konten dan jenis item data bergantung pada set metadata ekspresi yang terkait dengan instance ekspresi terkait. Karena tipe argumen ke operator EVALUATE sudah ditentukan sebelumnya, item data diubah menjadi salah satu dari dua bentuk kanonik (string atau AnyData3) sebelum meneruskannya sebagai argumen kedua.</p>
+          <p>
+          <p style="text-align:justify;">
+            Secara default, ketika ekspresi dan item data diteruskan ke operator EVALUATE, query dinamis dikeluarkan untuk mengevaluasi ekspresi untuk item data. Jadi, untuk sekumpulan ekspresi (disimpan dalam kolom), satu query dinamis per ekspresi diperlukan. Pendekatan pengujian setiap ekspresi untuk item data ini merupakan solusi waktu linier dan tidak dapat diskalakan untuk kumpulan ekspresi yang besar yang dievaluasi terhadap item data volume tinggi. Untuk tujuan ini, indeks opsional dapat ditentukan pada kolom yang menyimpan ekspresi untuk mengevaluasinya secara efisien.​</p>
+          <p>
+
+
+            <Br>
+              <hr color="purple" size="50" noshade align="center" width="900px">
+              <br>
+    
+              <p class="text-uppercase text-center title-text">
+                <b>Evaluasi Multiple Expression</b>
+            </p>
+            <p style="text-align:justify;">
+              Untuk mengevaluasi ekspresi yang membawa banyak operasi di dalamnya, kita dapat melakukan perhitungan setiap operasi satu per satu. Namun, dalam sistem pemrosesan query, kami menggunakan dua metode untuk mengevaluasi ekspresi yang membawa banyak operasi. Metode tersebut adalah:​</p>
+            <p>
+            <p style="text-align:justify;">
+              <ul>
+                <li style="text-align: justify;"><i><b>Materialization</b></i> <br>Dalam metode ini, ekspresi yang diberikan mengevaluasi satu operasi relasional dalam satu waktu. Selain itu, setiap operasi dievaluasi dalam urutan atau urutan yang sesuai. Setelah mengevaluasi semua operasi, keluarannya diwujudkan dalam hubungan sementara untuk penggunaan selanjutnya. Ini membawa metode materialisasi ke kerugian. Kerugiannya adalah bahwa ia perlu membangun hubungan sementara tersebut untuk mewujudkan hasil operasi yang dievaluasi, masing-masing. Hubungan sementara ini ditulis pada disk kecuali ukurannya kecil.</li><br>
+                <li style="text-align: justify;"><i><b>Pipelining</b></i> <br>Pipelining adalah metode alternatif atau pendekatan untuk metode materialisasi. Dalam pipelining, ini memungkinkan kita untuk mengevaluasi setiap operasi relasional ekspresi secara bersamaan dalam pipeline. Dalam pendekatan ini, setelah mengevaluasi satu operasi, keluarannya diteruskan ke operasi berikutnya, dan rantai berlanjut hingga semua operasi relasional dievaluasi secara menyeluruh. Jadi, tidak ada persyaratan untuk menyimpan hubungan sementara dalam pemipaan. Keuntungan dari pipelining membuatnya menjadi pendekatan yang lebih baik dibandingkan dengan pendekatan yang digunakan dalam metode materialisasi. Bahkan biaya dari kedua pendekatan tersebut dapat memiliki perbedaan selanjutnya di antara keduanya. Namun, kedua pendekatan tersebut menjalankan peran terbaik dalam kasus yang berbeda. Dengan demikian, kedua cara tersebut layak di tempatnya.</li>
+              </ul>
+            <p>
+              <Br>
+                <hr color="purple" size="50" noshade align="center" width="900px">
+          
+      <br>
+      <br>
+      <h3 class="text-uppercase text-center title-text">
+        <b>Referensi</b>
+      </h3>
+      <br>
+      <p class="text-center" style="text-align:justify;">
+        <a href="https://www.javatpoint.com/pipelining-in-query-processing">Developed by JavaTpoint: Pipelining in Query Processing</a>
+      </p>
+      <p class="text-center" style="text-align:justify;">
+        <a href="https://www.javatpoint.com/estimating-query-cost">Developed by JavaTpoint: Estimating Query Cost</a>
+      </p>
+      <p class="text-center" style="text-align:justify;">
+        <a href="http://dinus.ac.id/repository/docs/ajar/Query_Processing2.pptx">Query Processing2</a>
+      </p>
+      <p class="text-center" style="text-align:justify;">
+        <a href="https://franswaysm.wordpress.com/2017/03/28/teori-bahasa-automata/">Franswaysm: Teori Bahsa dan Otomata</a>
+      </p>
+      <p class="text-center" style="text-align:justify;">
+        <a href="https://slideplayer.info/slide/12697075/">Widyawati Susman: Query Processing</a>
+      </p>
+      
+    </main>
+    <br><br><br>
+      <hr color="purple" size="50" noshade align="center" width="90px">
+
+
+    <footer class="footer-area">
+      <div class="container">
+        <div class="logo-footer">
+          <div class="site-logo text-center py-4">
+            <a><img src="img/Logo.svg" alt="logo-footer"/></a>
+          </div>
+          <div class="social text-center">
+            <h5 class="text-uppercase"><b>Follow Me</b></h5>
+            <a href="https://www.facebook.com/Sri.Fatra" target="_blank"
+              ><i class="fab fa-facebook social-media"></i
+            ></a>
+            <a href="https://www.instagram.com/ayu.fatra/" target="_blank"
+              ><i class="fab fa-instagram social-media"></i
+            ></a>
+            <a href="https://twitter.com/Sri_Fatra" target="_blank"
+              ><i class="fab fa-twitter social-media"></i
+            ></a>
+          </div>
+          <div class="copyrights text-center">
+            <p class="para">
+              <B>© SRI RAHAYU INDAL FATRA, 2020</B>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Start Back-Top -->
+      <div id="back-top">
+        <a title="Go Up" href="#">
+          <i class="fas fa-arrow-up"></i>
+        </a>
+      </div>
+      <!-- End Back-Top -->
+    </footer>
+
+    <!-- jQuery JS file -->
+    <script src="js/jquery.3.4.1.js"></script>
+
+    <!-- Bootstrap JS file -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Isotope JS library -->
+    <script src="vendor/isotope/isotope.min.js"></script>
+
+    <!-- Magnific Popup Script file -->
+    <script src="vendor/Magnific-Popup/dist/jquery.magnific-popup.min.js"></script>
+
+    <!-- Owl-carousel JS file -->
+    <script src="vendor/owl-carousel/js/owl.carousel.min.js"></script>
+
+    <!-- ScrollReveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- Aos Animate -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+      AOS.init();
+    </script>
+
+    <!-- Custom JS file -->
+    <script src="js/main.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- Icon Web -->
+    <link rel="icon" href="img/favicon.png" />
+    <title>Evaluation Plan - AyuFatra</title>
+
+    <!-- Bootstrap CSS file -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- Font Awesome Icons CSS file -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- Custom CSS file -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Responsive CSS file -->
+    <link rel="stylesheet" href="css/responsive.css" />
+    <!-- Aos Animate -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Start Preloader Area -->
+    <div class="preloader-area">
+      <div class="ring-loader">
+        Loading
+        <span class="span-ring"></span>
+      </div>
+    </div>
+    <!-- End Preloader Area -->
+
+    <!-- Start Header Area -->
+    <header class="header_area">
+      <div class="main-menu">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <a class="navbar-brand" href="profile-card.html"
+            ><img src="img/Logo.svg" alt="logo"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="mr-auto"></div>
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Basis Data II
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="PemrosesanQuery.html">Pemrosesan Query </a>
+                  <a class="dropdown-item " href="EvaluationPlan.html">Evaluation Plan</a>
+                </div>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- End Header Area -->
+
+    <!-- Start Main Area -->
+    <main class="site-main"><br>
+      <div class="container" data-aos="zoom-in" data-aos-duration="3000" align="center">
+        <img src="img/DB2.PNG" width="100%" height="80%" style="display: block; margin: auto;"><br>
+    </div>
+      
+      <br>
+          <hr color="purple" size="50" noshade align="center" width="900px"><br>
+          <div class="container mb-5" data-aos="zoom-in" data-aos-duration="1000">
+            <img src="img/panah.png" width="5%" height="5%" style="display: block; margin: auto;"><br>
+        </div>
+          
+      <!-- my Tasks -->
+      <section class="nomor1">
+        <div class="container">
+
+      <p class="text-uppercase text-center title-text">
+        <b>Pengantar</b>
+      </p>
+      <p>
+        <strong style="color:rebeccapurple"><h3>Structure of Query Evaluation Plans</h3></strong>
+      </p>
+      <p style="text-align:justify;">
+          Evaluation plan digunakan untuk menentukan dengan tepat algoritma apa yang harus digunakan untuk setiap operasi dan bagaimana pelaksanaan operasi harus dikoordinasikan. Sejauh ini kita telah membahas terutama dua pendekatan dasar untuk memilih rencana eksekusi (tindakan) yaitu:<br> (a) pengoptimalan heuristik dan <br>(b) pengoptimalan berbasis biaya. <br>Sebagian besar pengoptimal kueri menggabungkan elemen dari kedua pendekatan ini. Gambar di bawah menunjukkan salah satu rencana evaluasi yang memungkinkan.<br></p>
+          <img src="img/plan.jpeg" style="display: block; margin: auto;">
+      <p>
+        <br>
+         <strong style="color:rebeccapurple"><h3>Choise of Evaluation Plans</h3></strong>
+      </p>
+      <p style="text-align:justify;">
+         Pembuatan ekspresi hanyalah bagian dari proses pengoptimalan kueri, karena setiap operasi dalam ekspresi dapat diimplementasikan dengan algoritme yang berbeda. Oleh karena itu, ‘Evaluation Plan‘ diperlukan untuk mendefinisikan dengan tepat algoritma apa yang harus digunakan untuk setiap operasi, dan bagaimana pelaksanaan operasi harus dikoordinasikan. Pada gambar mengilustrasikan satu rencana evaluasi yang mungkin untuk ekspresi beberapa algoritme berbeda dapat digunakan untuk setiap operasi relasional, sehingga memunculkan rencana evaluasi alternatif. Selanjutnya, keputusan tentang pipelining harus dibuat. Pada gambar, tepi dari operasi pemilihan ke operasi gabungan gabungan ditandai sebagai pipelined; pipelining layak jika operasi pemilihan menghasilkan outputnya yang diurutkan berdasarkan atribut gabungan. Mereka akan melakukannya jika indeksnya aktifcatatan penyimpanan ‘branch‘ dan akun dengan nilai yang sama untuk atribut indeks yang diurutkan berdasarkan ‘branch-name‘ .<br></p>
+      
+      <p>
+        <strong style="color:rebeccapurple"><h3>Interaction of Evaluation Techniques</h3></strong>
+      </p>
+        <p style="text-align:justify;">
+          Salah satu cara untuk memilih evaluation plan untuk ekspresi kueri adalah dengan memilih untuk setiap operasi algoritme termurah (cheapest algorithm) untuk mengevaluasinya. Kita dapat memilih urutan operasi apa pun yang memastikan bahwa operasi yang lebih rendah di pohon dijalankan sebelum operasi yang lebih tinggi di pohon.<br></p>
+        <p style="text-align:justify;">
+          Namun, memilih algoritme termurah untuk setiap operasi secara independen belum tentu merupakan ide yang bagus. Meskipun merge join pada tingkat tertentu mungkin lebih mahal. sebuah gabungan hash, ini mungkin memberikan keluaran yang diurutkan yang membuat evaluasi operasi selanjutnya (seperti eliminasi duplikat, persimpangan, atau penggabungan gabungan lainnya) lebih murah. Demikian pula, gabungan loop bersarang dengan pengindeksan dapat memberikan peluang untuk pipelining hasil ke operasi berikutnya.<br></p>
+        
+    <p class="text-uppercase text-center title-text">
+       <b>Evaluation Plan</b>
+    </p>
+    <p>
+       <strong style="color:rebeccapurple"><h3>MySQL</h3></strong>
+    </p>
+    <p style="text-align:justify;">
+      MySQL menggunakan sintaks explain <query> yang sama dengan PostgreSQL, tetapi hasilnya adalah tabel yang isinya tidak mudah dipahami. Namun, menjalankan peringatan acara setelah perintah menjelaskan akan menampilkan rencana evaluasi dalam format yang lebih dapat dibaca manusia.​</p>
+    <p>
+    <p style="text-align:justify;">
+      <img src="img/mysql.png" alt="run" align="left"/>
+      Tergantung detail tabel, kolom, indeks, dan kondisi di klausa WHERE, pengoptimal MySQL mempertimbangkan banyak teknik untuk melakukan pencarian yang terlibat dalam query SQL secara efisien. Query pada tabel besar dapat dilakukan tanpa membaca semua baris; gabungan yang melibatkan beberapa tabel dapat dilakukan tanpa membandingkan setiap kombinasi baris. Rangkaian operasi yang dipilih pengoptimal untuk menjalankan query paling efisien disebut "query execution plan", juga dikenal sebagai rencana EXPLAIN. Tujuan Anda adalah untuk mengenali aspek dari rencana EXPLAIN yang menunjukkan bahwa query dioptimalkan dengan baik, dan untuk mempelajari sintaks SQL dan teknik pengindeksan untuk meningkatkan rencana jika Anda melihat beberapa operasi yang tidak efisien.</p>
+    <p>
+    <p style="text-align:justify;">
+      Perintah EXPLAIN memberikan informasi tentang bagaimana MySQL menjalankan query. EXPLAIN dapat bekerja dengan pernyataan SELECT, DELETE, INSERT, REPLACE, dan UPDATE. Pertama-tama akan menganalisis query asli, kemudian mencoba mengoptimalkan query dan melihat ke dalam rencana eksekusi query yang dioptimalkan untuk melihat apa yang berubah dan mengapa.</p>
+    <p>
+      <p style="text-align:justify;">
+        Menggunakan EXPLAIN sesederhana pra-pending sebelum query SELECT. </p>
+      <p>
+    
+      
+            
+      <br><br>    
+      <hr color="purple" size="50" noshade align="center" width="900px">
+      <br>
+      <h3 class="text-uppercase text-center title-text">
+        <b>Referensi</b>
+      </h3>
+      <br>
+      <p class="text-center" style="text-align:justify;">
+        <a href="https://www.scribd.com/doc/194588771/Implementasi-Teori-Bahasa-Dan-Automata">Arief Hidayat Sutomo: Implementasi Teori Bahasa dan Otomata</a>
+      </p>
+      <p class="text-center" style="text-align:justify;">
+        <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwiJ-_matO3rAhUQA3IKHQVXDsIQFjADegQIBBAB&url=http%3A%2F%2Fdharmayanti.staff.gunadarma.ac.id%2FDownloads%2Ffiles%2F8874%2FModul_TBO-1.pdf&usg=AOvVaw1sfEpWiquGOcB1ds2meXo_">Darmayanti: Teori Bahasa dan Otomata</a>
+      </p>
+      <p class="text-center" style="text-align:justify;">
+        <a href="http://www.materikuliahif-unpas.com/2018/08/teori-bahasa-dan-automata.html">Materi Kuliah IF: Teori Bahasa dan Otomata</a>
+      </p>
+    </main>
+    <br><br><br>
+      <hr color="purple" size="50" noshade align="center" width="90px">
+
+
+    <footer class="footer-area">
+      <div class="container">
+        <div class="logo-footer">
+          <div class="site-logo text-center py-4">
+            <a><img src="img/Logo.svg" alt="logo-footer"/></a>
+          </div>
+          <div class="social text-center">
+            <h5 class="text-uppercase"><b>Follow Me</b></h5>
+            <a href="https://www.facebook.com/Sri.Fatra" target="_blank"
+              ><i class="fab fa-facebook social-media"></i
+            ></a>
+            <a href="https://www.instagram.com/ayu.fatra/" target="_blank"
+              ><i class="fab fa-instagram social-media"></i
+            ></a>
+            <a href="https://twitter.com/Sri_Fatra" target="_blank"
+              ><i class="fab fa-twitter social-media"></i
+            ></a>
+          </div>
+          <div class="copyrights text-center">
+            <p class="para">
+              <B>© SRI RAHAYU INDAL FATRA, 2020</B>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Start Back-Top -->
+      <div id="back-top">
+        <a title="Go Up" href="#">
+          <i class="fas fa-arrow-up"></i>
+        </a>
+      </div>
+      <!-- End Back-Top -->
+    </footer>
+
+    <!-- jQuery JS file -->
+    <script src="js/jquery.3.4.1.js"></script>
+
+    <!-- Bootstrap JS file -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Isotope JS library -->
+    <script src="vendor/isotope/isotope.min.js"></script>
+
+    <!-- Magnific Popup Script file -->
+    <script src="vendor/Magnific-Popup/dist/jquery.magnific-popup.min.js"></script>
+
+    <!-- Owl-carousel JS file -->
+    <script src="vendor/owl-carousel/js/owl.carousel.min.js"></script>
+
+    <!-- ScrollReveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- Aos Animate -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+      AOS.init();
+    </script>
+
+    <!-- Custom JS file -->
+    <script src="js/main.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
