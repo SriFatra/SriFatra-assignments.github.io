@@ -111,6 +111,10 @@
         <p style="text-align:justify;">
           Namun, memilih algoritme termurah untuk setiap operasi secara independen belum tentu merupakan ide yang bagus. Meskipun merge join pada tingkat tertentu mungkin lebih mahal. sebuah gabungan hash, ini mungkin memberikan keluaran yang diurutkan yang membuat evaluasi operasi selanjutnya (seperti eliminasi duplikat, persimpangan, atau penggabungan gabungan lainnya) lebih murah. Demikian pula, gabungan loop bersarang dengan pengindeksan dapat memberikan peluang untuk pipelining hasil ke operasi berikutnya.<br></p>
         
+          <Br><br>
+            <hr color="purple" size="50" noshade align="center" width="900px">
+  <br>
+  <br>
     <p class="text-uppercase text-center title-text">
        <b>Evaluation Plan</b>
     </p>
@@ -129,7 +133,34 @@
     <p>
       <p style="text-align:justify;">
         Menggunakan EXPLAIN sesederhana pra-pending sebelum query SELECT. </p>
-      <p>
+    <p>
+      <ul>
+        <li style="text-align: justify;"><i><b>id:</b></i> Pengenal berurutan untuk setiap SELECT dalam query (untuk saat Anda memiliki subkueri bertingkat)​</li>
+        <li style="text-align: justify;"><i><b>select_type:</b></i> Tipe query SELECT</li>
+        <li style="text-align: justify;"><i><b>table:</b></i> tabel yang dirujuk oleh baris</li>
+        <li style="text-align: justify;"><i><b>type:</b></i> Bagaimana MySQL menggabungkan tabel yang digunakan. Ini adalah salah satu bidang yang paling berwawasan di keluaran karena dapat menunjukkan indeks yang hilang atau bagaimana kueri ditulis harus dipertimbangkan kembali.</li>
+        <li style="text-align: justify;"><i><b>possible_key:</b></i> Menunjukkan kunci yang dapat digunakan oleh MySQL untuk menemukan baris dari tabel, meskipun mereka mungkin atau mungkin tidak digunakan dalam praktiknya. Faktanya, kolom ini sering kali dapat membantu dalam mengoptimalkan kueri karena jika kolom tersebut NULL, ini menunjukkan tidak ada indeks yang relevan dapat ditemukan.</li>
+        <li style="text-align: justify;"><i><b>key:</b></i> Menunjukkan indeks sebenarnya yang digunakan oleh MySQL. Kolom ini mungkin berisi indeks yang tidak terdaftar di kolom kunci_mungkin. Pengoptimal MySQL selalu mencari kunci optimal yang dapat digunakan untuk kueri. Saat bergabung dengan banyak tabel, ia mungkin menemukan beberapa kunci lain yang tidak terdaftar di kemungkinan_key tetapi lebih optimal.</li>
+        <li style="text-align: justify;"><i><b>key_len:</b></i> Menunjukkan panjang indeks yang dipilih Query Optimizer untuk digunakan. Misalnya, nilai key_len 4 berarti membutuhkan memori untuk menyimpan empat karakter.</li>
+        <li style="text-align: justify;"><i><b>ref:</b></i> Menunjukkan kolom atau konstanta yang dibandingkan dengan indeks bernama di kolom kunci. MySQL akan memilih nilai konstan untuk dibandingkan atau kolom itu sendiri berdasarkan rencana eksekusi kueri.</li>
+        <li style="text-align: justify;"><i><b>row:</b></i> daftar jumlah record yang diperiksa untuk menghasilkan output. Ini adalah kolom penting lainnya yang perlu difokuskan pada pengoptimalan kueri, terutama untuk kueri yang menggunakan JOIN dan subkueri.</li>
+        <li style="text-align: justify;"><i><b>extra:</b></i> Berisi informasi tambahan mengenai rencana eksekusi kueri. Nilai seperti "Using temporary", "Using filesort", dll. Di kolom ini mungkin menunjukkan kueri yang bermasalah.</li>
+      </ul>
+    </p>
+
+    <p>
+      <p style="text-align:justify;">
+        Berikut beberapa langkah dalam menjalankan perintah EXPLAIN </p>
+    <p>
+      <ul>
+        <li style="text-align: justify;">Jalankan perintah EXPLAIN untuk memeriksa jalur eksekusi yang direncanakan untuk kueri SQL Anda.​</li>
+        <li style="text-align: justify;">Lihat tabel urutan yang dipilih MySQL untuk eksekusi. Apakah itu masuk akal? Jika tidak, tanyakan pada diri Anda mengapa MySQL salah, apa yang hilang?​</li>
+        <li style="text-align: justify;">Temukan ketentuan di klausa WHERE yang paling selektif dan pastikan Anda membuat indeks yang optimal untuk menyertakannya. Anda dapat membaca informasi lebih lanjut tentang cara membuat indeks yang optimal di sini.​</li>
+        <li style="text-align: justify;">Cari tempat-tempat MySQL tidak menggunakan indeks untuk pencarian dan pemfilteran, karena itu mungkin titik lemahnya.​</li>
+        <li style="text-align: justify;">Cari baris di mana MySQL menunjukkan estimasi baris yang sangat tinggi yang perlu diperiksa untuk mengevaluasi kueri.​</li>
+      </ul>
+    </p>
+
     
       
             
