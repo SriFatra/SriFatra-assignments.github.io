@@ -132,8 +132,13 @@
       Perintah EXPLAIN memberikan informasi tentang bagaimana MySQL menjalankan query. EXPLAIN dapat bekerja dengan pernyataan SELECT, DELETE, INSERT, REPLACE, dan UPDATE. Pertama-tama akan menganalisis query asli, kemudian mencoba mengoptimalkan query dan melihat ke dalam rencana eksekusi query yang dioptimalkan untuk melihat apa yang berubah dan mengapa.</p>
     <p>
       <p style="text-align:justify;">
-        Menggunakan EXPLAIN sesederhana pra-pending sebelum query SELECT. </p>
-    <p>
+        Dengan bantuan EXPLAIN, Anda dapat melihat di mana Anda harus menambahkan indeks ke tabel sehingga pernyataan tersebut dieksekusi lebih cepat dengan menggunakan indeks untuk menemukan baris. Anda juga dapat menggunakan EXPLAIN untuk memeriksa apakah pengoptimal menggabungkan tabel dalam urutan yang optimal. Untuk memberi petunjuk kepada pengoptimal agar menggunakan perintah gabungan yang sesuai dengan urutan di mana tabel diberi nama dalam pernyataan SELECT, mulailah pernyataan tersebut dengan SELECT STRAIGHT_JOIN daripada hanya dengan SELECT.</p>
+        <p>
+            <img src="img/sql1.jpg" alt="run" height="300" width="590" align="center"/>
+            <p>
+                <p style="text-align:justify;">
+                    Setiap baris di EXPLAIN berisi bidang berikut: </p>
+              <p>
       <ul>
         <li style="text-align: justify;"><i><b>id:</b></i> Pengenal berurutan untuk setiap SELECT dalam query (untuk saat Anda memiliki subkueri bertingkat)​</li>
         <li style="text-align: justify;"><i><b>select_type:</b></i> Tipe query SELECT</li>
@@ -161,9 +166,24 @@
       </ul>
     </p>
 
+    <p>
+        <strong style="color:rebeccapurple"><h3>PostgreSQL</h3></strong>
+     </p>
+     <p style="text-align:justify;">
+        <img src="img/pos1.png" alt="run" align="left"/>
+        PostgreSQL merancang rencana query untuk setiap query yang diterimanya. Memilih paket yang tepat agar sesuai dengan struktur query dan properti datanya sangat penting untuk kinerja yang baik, sehingga sistem menyertakan perencana kompleks yang mencoba memilih rencana yang baik. Anda dapat menggunakan perintah EXPLAIN untuk melihat rencana query apa yang dibuat perencana untuk query apa pun. Membaca rencana adalah seni yang membutuhkan pengalaman untuk dikuasai, tetapi bagian ini mencoba membahas dasar-dasarnya.</p>
+     <p>
+     <p style="text-align:justify;">
+       
+       Struktur rencana query adalah pohon node rencana. Node di bagian bawah pohon adalah node scan: mereka mengembalikan baris mentah dari tabel. Ada berbagai jenis node pemindaian untuk metode akses tabel yang berbeda: pemindaian sekuensial, pemindaian indeks, dan pemindaian indeks bitmap. Ada juga sumber baris non-tabel, seperti klausa VALUES dan fungsi set-return di FROM, yang memiliki jenis node pemindaiannya sendiri. Jika query memerlukan penggabungan, agregasi, pengurutan, atau operasi lain pada baris mentah, maka akan ada node tambahan di atas node pemindaian untuk melakukan operasi ini.</p>
+     <p>
+     <p style="text-align:justify;">
+       Perintah EXPLAIN memberikan informasi tentang bagaimana MySQL menjalankan query. EXPLAIN dapat bekerja dengan pernyataan SELECT, DELETE, INSERT, REPLACE, dan UPDATE. Pertama-tama akan menganalisis query asli, kemudian mencoba mengoptimalkan query dan melihat ke dalam rencana eksekusi query yang dioptimalkan untuk melihat apa yang berubah dan mengapa.</p>
+     <p>
+
     
       
-            
+     
       <br><br>    
       <hr color="purple" size="50" noshade align="center" width="900px">
       <br>
