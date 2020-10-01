@@ -174,12 +174,111 @@
         PostgreSQL merancang rencana query untuk setiap query yang diterimanya. Memilih paket yang tepat agar sesuai dengan struktur query dan properti datanya sangat penting untuk kinerja yang baik, sehingga sistem menyertakan perencana kompleks yang mencoba memilih rencana yang baik. Anda dapat menggunakan perintah EXPLAIN untuk melihat rencana query apa yang dibuat perencana untuk query apa pun. Membaca rencana adalah seni yang membutuhkan pengalaman untuk dikuasai, tetapi bagian ini mencoba membahas dasar-dasarnya.</p>
      <p>
      <p style="text-align:justify;">
-       
        Struktur rencana query adalah pohon node rencana. Node di bagian bawah pohon adalah node scan: mereka mengembalikan baris mentah dari tabel. Ada berbagai jenis node pemindaian untuk metode akses tabel yang berbeda: pemindaian sekuensial, pemindaian indeks, dan pemindaian indeks bitmap. Ada juga sumber baris non-tabel, seperti klausa VALUES dan fungsi set-return di FROM, yang memiliki jenis node pemindaiannya sendiri. Jika query memerlukan penggabungan, agregasi, pengurutan, atau operasi lain pada baris mentah, maka akan ada node tambahan di atas node pemindaian untuk melakukan operasi ini.</p>
      <p>
      <p style="text-align:justify;">
        Perintah EXPLAIN memberikan informasi tentang bagaimana MySQL menjalankan query. EXPLAIN dapat bekerja dengan pernyataan SELECT, DELETE, INSERT, REPLACE, dan UPDATE. Pertama-tama akan menganalisis query asli, kemudian mencoba mengoptimalkan query dan melihat ke dalam rencana eksekusi query yang dioptimalkan untuk melihat apa yang berubah dan mengapa.</p>
      <p>
+      <p>
+        <img src="img/pos2.jpg" alt="run" height="150" width="590" align="center"/>
+        <p>
+            <p style="text-align:justify;">
+              Karena query ini tidak memiliki klausa WHERE, query ini harus memindai semua baris tabel, sehingga perencana telah memilih untuk menggunakan rencana pemindaian sekuensial sederhana. Angka-angka yang dikutip dalam tanda kurung adalah (kiri ke kanan): </p>
+          <p>
+  <ul>
+    <li style="text-align: justify;">Perkiraan biaya awal. Ini adalah waktu yang dihabiskan sebelum fase keluaran dapat dimulai. Misalnya waktu untuk melakukan penyortiran di node sortir.</li>
+    <li style="text-align: justify;">Perkiraan biaya total. Ini dinyatakan dengan asumsi bahwa node rencana dijalankan hingga selesai, yaitu, semua baris yang tersedia diambil. Dalam praktiknya, node induk mungkin berhenti membaca semua baris yang tersedia.</li>
+    <li style="text-align: justify;">Perkiraan lebar rata-rata baris yang dikeluarkan oleh node rencana ini (dalam byte).</li>
+    <li style="text-align: justify;">Perkiraan jumlah baris yang dikeluarkan oleh node rencana ini. Sekali lagi, node diasumsikan dijalankan sampai selesai.</li>
+  </ul>
+  <p style="text-align:justify;">
+    Biaya diukur dalam unit arbitrer yang ditentukan oleh parameter biaya perencana. Praktik tradisional adalah mengukur biaya dalam satuan pengambilan halaman disk; yaitu, seq_page_cost secara konvensional ditetapkan ke 1.0 dan parameter biaya lainnya ditetapkan relatif terhadap itu. Contoh pada bagian ini dijalankan dengan parameter biaya default. </p>
+<p>
+
+
+  <p>
+    <strong style="color:rebeccapurple"><h3>SQL Server</h3></strong>
+ </p>
+ <p style="text-align:justify;">
+    SQL adalah bahasa pemrograman tujuan khusus yang dirancang untuk menangani data dalam sistem manajemen basis data relasional. Server database adalah program komputer yang menyediakan layanan database ke program atau komputer lain, seperti yang didefinisikan oleh model klien-server. Oleh karena itu, SQL Server adalah server database yang mengimplementasikan Structured Query Language (SQL).</p>
+    <img src="img/ser.png" alt="run" height="250" width="330" align="left"/>
+  
+ <p style="text-align:justify;">
+  Execution plans akan dihasilkan oleh Query optimizer dengan bantuan statistik dan pohon prosesor Algebrizer. Hal ini merupakan hasil dari Pengoptimal query dan memberi tahu cara melakukan \ melakukan pekerjaan \ persyaratan Anda.</p>
+ <p>
+ <p style="text-align:justify;">
+  Execution plans disimpan dalam memori yang disebut cache rencana, sehingga dapat digunakan kembali. Setiap rencana disimpan satu kali kecuali pengoptimal memutuskan paralelisme untuk eksekusi query. </p>
+ <p>
+
+  <p style="text-align: justify;" > 
+    Kita bisa mendapatkan excecution plan aktual maupun sekedar estimasi untuk kueri tertentu, dan salah satu dari kedua jenis ini dapat ditampilkan sebagai grafik, teks, atau rencana XML. Satu-satunya perbedaan antara ketiga format ini adalah tingkat detail informasi yang ditampilkan. Namun, ketika rencana aktual diminta, kueri harus dijalankan, dan rencana tersebut kemudian ditampilkan bersama dengan hasil kueri. Di sisi lain, ketika perkiraan rencana diminta, kueri secara alami tidak dijalankan, dan rencana yang ditampilkan hanyalah rencana yang kemungkinan besar akan digunakan SQL Server jika kueri itu dieksekusi (ingat bahwa kompilasi ulang, yang akan kita diskusikan nanti, dapat menghasilkan rencana yang berbeda pada waktu eksekusi). Namun demikian, menggunakan rencana yang diperkirakan memiliki beberapa keuntungan, termasuk menampilkan rencana untuk kueri yang berjalan lama untuk diperiksa tanpa benar-benar menjalankan kueri, atau menampilkan rencana untuk operasi pembaruan tanpa mengubah database.
+    </p>
+
+    <p style="text-align:justify;">
+      <b>SHOWPLAN_TEXT</b>​ <br> merupakan skenario terburuk dari sebuah algoritma, dan biasanya terdapat notasi n yang merepresentasikan jumlah masukan. Berikut adalah diagram notasi O besar dengan masukan yang dimulai dari 0 hingga tak terhingga.
+      <br>
+      <img src="img/ser1.jpg" width="50%" height="50%" style="display: block; margin: auto;">
+    
+      <p style="text-align:justify;">
+        <b>SHOWPLAN_ALL</b>​ <br> Opsi ini mirip dengan perkiraan rencana eksekusi grafis, tetapi memiliki beberapa fitur tambahan yang menyertainya termasuk jenis operator fisik dan jenis operator logika.
+        <br>
+        <img src="img/ser2.jpg" width="50%" height="50%" style="display: block; margin: auto;">
+      
+        <p style="text-align:justify;">
+          <b>SHOWPLAN_XML</b>​ <br> Anda dapat melihat bahwa rencana query hadir dalam format XML. Anda dapat melihat rencana eksekusi sesuai perkiraan.
+          <br>
+          <img src="img/ser3.jpg" width="50%" height="50%" style="display: block; margin: auto;">
+
+
+          <p>
+            <strong style="color:rebeccapurple"><h3>Oracle</h3></strong>
+         </p>
+         <p style="text-align:justify;">
+          <img src="img/ora.png" alt="run" height="180" width="330" align="left"/>
+          Rencana evaluasi query (Oracle menyebutnya sebagai "excecution plan") adalah program untuk mesin abstrak (juru bahasa) di dalam DBMS. Ini dihasilkan oleh pengoptimal query. Dalam kebanyakan sistem, query evaluation plan (QEP) mirip dengan ekspresi aljabar relasional (sangat bergantung pada sistem). </p>
+          
+         <p style="text-align:justify;">
+          Pernyataan EXPLAIN PLAN menampilkan rencana eksekusi yang dipilih oleh pengoptimal Oracle untuk pernyataan SELECT, UPDATE, INSERT, dan DELETE. Rencana eksekusi pernyataan adalah urutan operasi yang dilakukan Oracle untuk menjalankan pernyataan tersebut.</p>
+         <p>
+        
+          <p style="text-align:justify;">
+            <br>Source tree row adalah inti dari rencana eksekusi. Ini menunjukkan informasi berikut:</p>
+           <p>
+
+            <ul>
+              <li style="text-align: justify;">Urutan tabel yang direferensikan oleh pernyataan.</li>
+              <li style="text-align: justify;">Metode akses untuk setiap tabel yang disebutkan dalam pernyataan.</li>
+              <li style="text-align: justify;">Metode gabungan untuk tabel yang dipengaruhi oleh operasi gabungan dalam pernyataan.</li>
+              <li style="text-align: justify;">Operasi data seperti filter, pengurutan, atau agregasi.</li>
+            </ul>
+
+            <p style="text-align:justify;">
+              Selain source tree row, tabel rencana berisi informasi tentang berikut ini:</p>
+             <p>
+  
+              <ul>
+                <li style="text-align: justify;">Optimasi, seperti biaya dan kardinalitas setiap operasi.</li>
+                <li style="text-align: justify;">Partisi, seperti sekumpulan partisi yang diakses.</li>
+                <li style="text-align: justify;">Eksekusi paralel, seperti metode distribusi input gabungan</li>
+              </ul>
+
+              <p style="text-align:justify;">
+                Hasil EXPLAIN PLAN memungkinkan Anda menentukan apakah pengoptimal memilih rencana eksekusi tertentu, seperti, loop bersarang yang digabungkan. Ini juga membantu Anda untuk memahami keputusan pengoptimal, seperti mengapa pengoptimal memilih gabungan loop bersarang daripada gabungan hash, dan memungkinkan Anda memahami kinerja query.
+                <br><br>
+                <img src="img/or1.jpg" width="50%" height="50%" style="display: block; margin: auto;">
+              
+                <p style="text-align:justify;">
+                  Contoh diatas menujukkan eksekusi pernyataan SELECT, Table Karyawan akan diakses dengan menggunkan seluruh tabel. Setiap baris dalam tabel karyawan diakses, dan kriteria klausa WHERE dievaluasi untuk setiap baris. Pernyataan SELECT mengembalikan baris yang memenuhi kriteria klausa WHERE.
+                  <br>
+                  <img src="img/or2.jpg" width="50%" height="50%" style="display: block; margin: auto;">
+
+                  <p style="text-align:justify;">
+                    Indeks EMP_NAME_IX digunakan dalam operasi pemindaian rentang untuk mengevaluasi kriteria klausa WHERE. Pernyataan SELECT mengembalikan baris yang memenuhi kondisi klausa WHERE.</p>
+                  
+        
+    
+  
+    
 
     
       
@@ -199,6 +298,15 @@
       </p>
       <p class="text-center" style="text-align:justify;">
         <a href="https://thoughtbot.com/blog/reading-an-explain-analyze-query-plan">Caleb Hearth: Reading a Postgres EXPLAIN ANALYZE Query Plan</a>
+      </p>
+      <p class="text-center" style="text-align:justify;">
+        <a href="https://docs.microsoft.com/en-us/sql/t-sql/statements/set-showplan-text-transact-sql?view=sql-server-ver15">Microsoft 2020: Transact-SQL Syntax Conventions</a>
+      </p>
+      <p class="text-center" style="text-align:justify;">
+        <a href="https://www.postgresqltutorial.com/postgresql-sample-database/">PostgreSQL Tutorial: PostgreSQL Sample Database</a>
+      </p>
+      <p class="text-center" style="text-align:justify;">
+        <a href="https://oracle-base.com/misc/site-info">Samuel Goldwyn: Oracle-Base</a>
       </p>
       <p class="text-center" style="text-align:justify;">
         <a href="https://www.sitepoint.com/using-explain-to-write-better-mysql-queries/">Shameer C: Using EXPLAIN to Write Better MySQL Queries</a>
