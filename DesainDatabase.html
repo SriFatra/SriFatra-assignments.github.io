@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- Icon Web -->
+    <link rel="icon" href="img/favicon.png" />
+    <title>Proses Desain DB - AyuFatra</title>
+
+    <!-- Bootstrap CSS file -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- Font Awesome Icons CSS file -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- Custom CSS file -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Responsive CSS file -->
+    <link rel="stylesheet" href="css/responsive.css" />
+    <!-- Aos Animate -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Start Preloader Area -->
+    <div class="preloader-area">
+      <div class="ring-loader">
+        Loading
+        <span class="span-ring"></span>
+      </div>
+    </div>
+    <!-- End Preloader Area -->
+
+    <!-- Start Header Area -->
+    <header class="header_area">
+      <div class="main-menu">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <a class="navbar-brand" href="profile-card.html"
+            ><img src="img/Logo.svg" alt="logo"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="mr-auto"></div>
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Basis Data II
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="PemrosesanQuery.html">Pemrosesan Query </a>
+                  <a class="dropdown-item " href="EvaluationPlan.html">Evaluation Plan</a>
+                  <a class="dropdown-item " href="DesainDatabase.html">Proses Desain Database</a>
+                </div>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- End Header Area -->
+
+    <!-- Start Main Area -->
+    <main class="site-main"><br>
+      <div class="container" data-aos="zoom-in" data-aos-duration="3000" align="center">
+        <img src="img/DB3.PNG" width="100%" height="80%" style="display: block; margin: auto;"><br>
+    </div>
+      
+      <br>
+          <hr color="purple" size="50" noshade align="center" width="900px"><br>
+          <div class="container mb-5" data-aos="zoom-in" data-aos-duration="1000">
+            <img src="img/panah.png" width="5%" height="5%" style="display: block; margin: auto;"><br>
+        </div>
+          
+      <!-- my Tasks -->
+      <section class="nomor1">
+        <div class="container">
+         
+          <p class="text-uppercase text-center title-text">
+            <b>Introduction</b>
+          </p>
+              <p>
+                <strong style="color:rebeccapurple"><h4>Apa itu Database?</h4></strong>
+              </p>
+              <p style="text-align:justify;">
+                ​Database atau basis data adalah kumpulan informasi yang disimpan dalam komputer secara sistematik sehingga dapat diperiksa menggunakan suatu program komputer untuk memperoleh suatu informasi. Sistem database dirancang untuk mengelola banyak informasi. Pengelolaan data melibatkan penentuan struktur untuk penyimpanan informasi dan penyediaan mekanisme untuk manipulasi informasi. Selain itu, sistem database harus memastikan keamanan informasi yang disimpan, meskipun sistem mengalami crash atau upaya akses yang tidak sah. Jika data akan dibagikan di antara beberapa pengguna, sistem harus menghindari kemungkinan hasil yang tidak wajar.
+
+                <p>
+                  <strong style="color:rebeccapurple"><h4>Apa itu Desain Database?</h4></strong>
+                </p>
+                <p style="text-align:justify;">
+                  Desain Basis Data adalah kumpulan proses yang memfasilitasi perancangan, pengembangan, implementasi, dan pemeliharaan sistem manajemen data perusahaan. Basis data yang dirancang dengan benar mudah dipelihara, meningkatkan konsistensi data, dan hemat biaya dalam hal ruang penyimpanan disk. Desainer database memutuskan bagaimana elemen data berkorelasi dan data apa yang harus disimpan.
+
+                  <p>
+                    <strong style="color:rebeccapurple"><h4>Apa Tujuan dari Desain Database?</h4></strong>
+                  </p>
+                <ul style="text-align: justify;">
+                  <li>Menyajikan data dan hubungan antar data yang diperlukan oleh pemakai dan aplikasi</li>
+                  <li>Mempermudah pemahaman informasi</li>
+                  <li>Melengkapi model data yang mendukung transaksi-transaksi yang diperlukan</li>
+                  <li>Mendukung proses permintaan dan performance seperti waktu respons, waktu proses dan tempat peyimpanan.</li>
+                </ul>
+              </p>
+              
+              <br>
+                <hr color="purple" size="50" noshade align="center" width="900px">
+              <br>
+
+              <p class="text-uppercase text-center title-text">
+                <b>PROSES DESAIN DATABASE</b>
+              </p>
+                  <p style="text-align:justify;">
+                    Secara khusus proses dari desain database berisikan 2 aktifitas paralel. Aktifitas pertama melibatkan desain dari isi data dan struktur database, sedangkan aktifitas kedua melibatkan desain pemrosesan database dan aplikasi-aplikasi perangkat lunak. Kedua aktifitas ini saling menjalin dan saling mempengaruhi satu sama lain. Dalam melakukan perancangan/mendesain sebuah database agar menjadi database yang handal dan tangguh, terdapat beberapa tahapan yang perlu dilakukan. Langkah-langkah tersebut diantaranya:
+                    <br>
+                    <img src="img/gam.png" width="33%" height="33%" style="display: block; margin: auto;">
+                    <p>
+                      <br>
+                      <strong style="color:rebeccapurple"><h4>Tahap 1: Pengumpulan dan Analisis Kebutuhan Data</h4></strong>
+                    </p>
+                   
+                    <p style="text-align:justify;">
+                      Dalam menentukan kebutuhan suatu sistem database, pertama-tama kita harus mengenal bagian-bagian lain dari sistem informasi yang akan berinteraksi dengan sistem database, termasuk para pemakai yang ada dan para pemakai yang baru serta aplikasinya. Kebutuhan-kebutuhan dari para pemakai dan aplikasi inilah yang kemudian dikumpulkan dan dianalisa.
+                      <p style="text-align:justify;">
+                        <b>Adapun Aktifitas yang dilakukan dalam  Pengumpulan dan Analisis Kebutuhan Data, yaitu:</b>
+                        <ol style="text-align: justify;">
+                          <li>Menentukan aplikasi utama dan kelompok user yang akan menggunakan database.</li>
+                          <li>Mempelajari dan menganalisa dokumen yang sudah ada yang berhubungan dengan aplikasi. Dokumen lain seperti policemanual, form, report dan struktur organisasi ditinjau kembali untuk menentukan dan menguji apakah dokumen-dokumen tersebut berpengaruh terhadap kumpulan data dan proses spesifikasi.</li>
+                          <li>Analisa lingkungan operasi dan pemrosesan data, teermasuk tipe transaksi dan frekuensi penggunaannya dan aliran informasi dalam sistem. Karakteristik geografi seperti pemakai, transaksi asli, tujuan pelaporan serta data input dan output diperinci.</li>
+                          <li>Penulisan respon dari kuesioner yang telah dikumpulkan dari para pemakai database yang berpotensi untuk mendapatkan informasi yang berharga.</li>
+                        </ol>
+                      <p>
+                        <p style="text-align:justify;">
+                         <b>Dan perlu diketahui terdapat 3 pendekatan dalam manajemen kebutuhan, yaitu:</b>
+                          <ol style="text-align: justify;">
+                            <li>Terpusat (centrelized)</li><br>
+                            <img src="img/gam1.png" width="60%" height="60%" style="display: block; margin: auto;" ><br>
+                            <li>View Integration</li><br>
+                            <img src="img/gam2.png" width="60%" height="60%" style="display: block; margin: auto;"><br>
+                            <li>Kombinasi keduanya<br>Kombinasi keduanya dapat diartikan sebagai pendekatan kombinasi dari pendekatan terpusat dan pendekatan view integration.</li>
+                          </ol>
+                        <p>
+
+                          <br>
+                        <strong style="color:rebeccapurple"><h4>Tahap 2: Desain Database Konseptual</h4></strong>
+                        <p style="text-align:justify;">
+                          Pada tahap ini dimanfaatkan untuk menghasilkan skema konseptual sebuah database menggunakan konsep model data tingkat tinggi. Dalam tahap ini ditampilkan objek yang menjadi domain database, tetapi belum dibahas tentang rincian implementasi.
+                          <p style="text-align:justify;">
+                            <b>Adapun Tahap desain database secara konseptual memiliki 2 aktifitas paralel, yaitu:</b>
+                            <ol style="text-align: justify;">
+                              <li>Desain Skema Konseptual<br>Dalam aktiftas ini yang perlu diperhatikan yaitu:</li>
+                              <ul style="text-align: justify;">
+                                <li>Memberikan gambaran yang lengkap dari struktur basis data yaitu arti, hubungan, dan batasan-batasan.</li>
+                                <li>Conceptual schema bersifat tetap.</li>
+                                <li>Alat komunikasi antar pemakai basis data, designer, dan analis.</li>
+                                <li>Harus bersifat: Mampu menyatakan relationship, Diagram, Formal, minimum dalam menyatakan spesifikasi data (tidak ada duplikasi), dan Simple</li>
+                              </ul>
+                              <br>
+                              <li>Desain Transaksi dan Aplikasi<br>Dalam aktiftas ini yang perlu diperhatikan, yaitu:<br>
+                                <ul style="text-align: justify;">
+                                  <li>Pada saat basis data didesain, aplikasi dari transaksi utama harus sudah diketahui.</li>
+                                  <li>Transaksi-transaksi baru dapat didefinisikan kemudian.</li>
+                                  <li>Tentukan karakteristik dari transaksi dan periksa apakah basis data sudah memuat semua informasi untuk melaksanakan transaksi.</li>
+                                  <li>Transaksi dapat dibagi dalam 3 bagian yaitu: retrieval, update, mixed.</li>
+                                  <li>Tahap 2A dan 2B sebaiknya dilaksanakan secara paralel dengan menggunakan umpan balik agar didapat skema desain dan transaksi yang stabil.</li>
+                                </ul>
+                              </li>
+                            </ol>
+                          <p>
+                      
+                            <br>
+                            <strong style="color:rebeccapurple"><h4>Tahap 3: Pemilihan DBMS</h4></strong>
+                            <p style="text-align:justify;">
+                                <b>Langkah Utama dalam memilih DBMS (Connoly), yaitu:</b>
+                                <ol style="text-align: justify;">
+                                  <li>Lihat informasi DBMS dari referensi</li>
+                                  <li>Buat daftar 2 atau 3 produk</li>
+                                  <li>Evaluasi produk</li>
+                                  <li>Rekomendasi dan buat reportnya</li>
+                                </ol>
+                              <p>
+                                
+                                <p style="text-align:justify;">
+                                  <b>Faktor-faktor dalam pemilihan DBMS, yaitu:</b>
+                                  <ol style="text-align: justify;">
+                                    <li>Faktor Teknis<br>
+                                      <ul style="text-align: justify;">
+                                        <li>DBMS (relational, hirarki , atau jaringan).</li>
+                                        <li>Struktur penyimpan dan akses path yang didukung DBMS.</li>
+                                        <li>Ketersediaan antar muka pemakai dan pemrogram tipe bahasa query tingkat tinggi ketersediaan alat bantu pengembangan kemampuan berhubungan dengan DBMS lain melalui media standard.</li>
+                                        <li>Pilihan arsitektur yang berhubungan dengan operator client server dan lain sebagainya.</li>
+                                      </ul>
+                                    </li><br>
+                                    <li>Faktor Ekonomi<br>
+                                      <ul style="text-align: justify;">
+                                        <li><i style="color:purple">Software Acquisiton Cost</i><br>Pembelian perangkat lunak termasuk pilihan bahasa pilihan antar muka seperti form, menu dan antar muka Web berbasis GUI, pilihan recovery/backup.</li>
+                                        <li><i style="color:purple">Maintenance Cost</i><br>Berhubungan dengan harga layanan pemeliharaan standar dari vendor dan untuk menjaga versi DBMS tetap up to date.</li>
+                                        <li><i style="color:purple">Hardware Acquisition Cost</i><br>Perangkat keras baru mungkin diperlukan seperti memory, terminal, disk drive dan controller baru atau penyimpan DBMS khusus.</li>
+                                        <li><i style="color:purple">Database Creation and Conversion Cost</i><br>Biaya pembuatan sistem basis data dari konversi sistem yang sudah ada ke perangkat lunak DBMS baru.</li>
+                                        <li><i style="color:purple">Personal Cost</i><br> Akuisisi perangkat lunak DBMS untuk pertama kali oleh organisasi biasanya dilakukan dengan reorganisasi departemen data processing.</li>
+                                        <li><i style="color:purple">Training Cost</i><br> Karena DBMS biasanya berupa sistem komplek personal harus ditraining menggunakan dan memprogram DBMS Training diperlukan pada semua level, termasuk programming, pengembangan aplikasi dan administrasi basis data.</li>
+                                        <li><i style="color:purple">Operating Cost</i><br> Biaya operasi lanjutan dari sistem basis data biasanya tidak termasuk dalam evaluasi.</li>
+                                      </ul>
+                                    </li><br>
+                                    <li>Faktor Organisasi<br>
+                                      <ul style="text-align: justify;">
+                                        <li><i style="color:purple">Struktur Data</i> <br>Jika data yang disimpan dalam database mengikuti struktur hirarki, maka suatu jenis hirarki dari DBMS harus dipikirkan.</li>
+                                        <li><i style="color:purple">Familiarity of Personnel with the System</i><br> Jika staff programming dalam organisasi familiar dengan DBMS tertentu, dapat mengurangi biaya training dan waktu pembelajaran.</li>
+                                        <li><i style="color:purple">Availability of Vendor Service</i><br> Keberadaan fasilitas pelayanan penjual untuk membantu memecahkan beberapa masalah sistem.</li>
+                                      </ul>
+                                    </li>
+                                  </ol>
+                                <p>
+
+                                  <br>
+                                  <strong style="color:rebeccapurple"><h4>Tahap 4: Desain Database Secara Logika (Pemetaan Model Data)</h4></strong>
+                                  <p style="text-align:justify;">
+                                    Pada tahap ini dimanfaatkan untuk membuat skema konseptual dan skema eksernal dalam model data dari DBMS terpilih.
+                                    <p style="text-align:justify;">
+                                      <b>Adapun tahap dalam proses pemetaan dibagai menjadi 2 bentuk, yaitu:</b>
+                                      <ol style="text-align: justify;">
+                                        <li>Pemetaan yang Tidak Tergantung pada Sistem (<i>System Independet Mapping</i>)
+                                          <br> Pada bentuk ini, pemetaan tidak mempertimbangkan karakteristik khusus atau kasus khusus yang diaplikasikan ke implementasi DBMS dari model data.
+                                        </li><br>
+                                        <li>Penyesuaian Skema ke DBMS yang Spesifik (<i>Tailoring the Schemas to Specific DBMS</i>)
+                                          <br>DBMS yang berbeda mengimplementasikan model data dengan menggunakan pemodelan khusus. Hasilnya merupakan pernyataan DDL dari DBMS yang dipilih.
+                                        </li>
+                                      </ol>
+                                    <p>
+                                      <p style="text-align:justify;">
+                                        <b>Di bawah ini merupakan tahap desain database secara logika:</b><br><br>
+                                           <img src="img/gam4.png" width="20%" height="20%" style="display: block; margin: auto;" ><br>
+                                           Keluaran dari tahap ini merupakan seperangkat perintah-perintah DDL dalam bahasa DBMS yang dipilih yang menentukan tingkat skema konseptual dan eksternal dari sistem database. Tetapi dalam beberapa hal, perintah-perintah DDL memasukkan parameter-parameter rancangan fisik sehingga DDL yang lengkap harus menunggu sampai tahap desain database secara fisik telah lengkap.
+                                       <p>
+
+                                        <br>
+                                        <strong style="color:rebeccapurple"><h4>Tahap 5: Desain Database Secara Fisik</h4></strong>
+                                        <p style="text-align:justify;">
+                                          Desain database secara fisik merupakan proses pemilihan struktur penyimpanan dan jalur akses pada file-file basis data untuk mencapai penampilan yang terbaik pada bermacam-macam aplikasi. Kemudian dirancang spesifikasi-spesifikasi untuk basis data yang disimpan yang berhubungan dengan struktur-struktur penyimpanan fisik, penempatan record dan jalur akses.
+                                          <p style="text-align:justify;">
+                                            <b>Di bawah ini merupakan tahap desain database secara fisik:</b><br><br>
+                                               <img src="img/gam3.png" width="45%" height="45%" style="display: block; margin: auto;" >
+                                           <p>
+                                          <p style="text-align:justify;">
+                                            <b>Beberapa petunjuk dalam pemilihan perancangan basis data secara fisik, yaitu:</b>
+                                            <ol style="text-align: justify;">
+                                              <li>Waktu Respon<br>Waktu transaksi basis data dimaksudkan untuk menerima respon selama eksekusi dan Waktu respon dipengaruhi waktu akses basis data untuk data item yang ditunjuk oleh suatu transaksi.</li>
+                                              <br>
+                                              <li>Penggunaan Ruang Penyimpanan<br>
+                                                Jumlah ruang penyimpanan yang digunakan oleh file basis data dan struktur-struktur jalur akses.
+                                              </li>
+                                              <br>
+                                              <li>Transaction Throughput<br>
+                                                Rata-rata jumlah transaksi yang dapat diproses per menit oleh sistem basis data, dan merupakan parameter kritis dari sistem transaksi (misal: digunakan pada pemesanan tempat di pesawat, bank, dll).
+                                              </li>
+                                            </ol>
+                                          <p>
+
+                                            <br>
+                                            <strong style="color:rebeccapurple"><h4>Tahap 6: Implementasi Database</h4></strong>
+                                            <p style="text-align:justify;">
+                                              Di bawah ini merupakan tahapan dalam pengimplementasian Basis Data, yaitu sebagai berikut:
+                                              <p style="text-align:justify;">
+                                              <ol style="text-align: justify;">
+                                                <li>DBA bersama desainer basis data menggunakan pernyataan dalam DDL , SDL (Storage Definition Language) dari DBMS terpilih digunakan untuk membuat skema basisdata dan file basis data (kosong).</li>
+                                                <li>Basis data kemudian dipopulasikan dengan data.</li>
+                                                <li>Jika data diubah dari sistem komputerisasi sebelumnya, rutin konversi diperlukan untuk format kembali data untuk menyimpan ke basis data baru.</li>
+                                                <li>Transaksi basis data harus diimplementasikan dengan aplikasi yang dibuat programmer.</li>
+                                                <li>Melakukan uji coba kode porgram dengan perintah DML.</li>
+                                                <li>Jika transaksi siap dan data disimpan ke basis data, tahap rancangan dan implementasi selesai dan tahap operasi dari sistem basis data dimulai.</li>
+                                                </ol>
+                                              <p>
+
+
+                                                <br>
+                                                <strong style="color:rebeccapurple"><h4>Tahap Lanjutan</h4></strong>
+                                                <p style="text-align:justify;">
+                                                 <ol style="text-align: justify;">
+                                                    <li>Konversi & Loading Data</li>
+                                                    <ul style="text-align: justify;">
+                                                      <li>Tahap ini dilakukan apabila sistem basis data yang ada digantikan sistem basis data baru.</li>
+                                                      <li>Semua data yg ada ditransfer ke basis data baru & konversi aplikasi yang ada unttk basis data baru.</li>
+                                                   </ul><br>
+                                                    <li>Testing & Evaluasi</li>
+                                                    <ul style="text-align: justify;">
+                                                      <li>Dilakukan pengujian utk kinerja, integritas, pengaksesan, konkuren, keamanan dari basis data.</li>
+                                                      <li>Dilakukan paralel dengan pemrograman aplikasi.</li>
+                                                      <li>Jika hasil yang dilakukan gagal, maka:<br>
+                                                        - Diuji berdasarkan referensi manual <br>
+                                                        - Modifikasi perancangan fisik <br>
+                                                        - Modifikasi perancangan logik <br>
+                                                        - Upgrade atau pengubahan perangkat lunak DBMS perangkat keras</li>
+                                                  </ul><br>
+                                                    <li>Pengoperasian & Perawatan</li>
+                                                    <ul style="text-align: justify;">
+                                                      <li>Pengoperasian basis data setelah divalidasi.</li>
+                                                      <li>Buat daftar 2 atau 3 produk</li>
+                                                      <li>Memonitor kinerja sistem jika tidak sesuai perlu reorganisasi basis data.</li>
+                                                      <li>Perawatan upgrade sistem aplikasi basis data jika diperlukan.</li>
+                                                    </ul><br>
+                                                  </ol>
+                                                <p>
+                                                
+              <br>
+                <hr color="purple" size="50" noshade align="center" width="900px">
+                                   
+      <br>
+      <br>
+      <h3 class="text-uppercase text-center title-text">
+        <b>Referensi</b>
+      </h3>
+      <br>
+      <p class="text-center" style="text-align:justify;">
+        <a href="https://www.academia.edu/8303437/Proses_Perancangan_Database"> Abraham Silberschatz: Database System Concepts - 7th edition</a>
+      </p>
+        <p class="text-center" style="text-align:justify;">
+          <a href="https://dinus.ac.id/repository/docs/ajar/Dtbs_7_Desain_Basis_Data.pdf">Dinus: Desain Basis Data</a>
+        </p>
+        <p class="text-center" style="text-align:justify;">
+          <a href="http://puzulaikasari.staff.gunadarma.ac.id/Downloads/files/25922/bab3+-+Design+Database.pdf">Gunadarma: Proses Perancangan Database/a>
+        </p>
+        <p class="text-center" style="text-align:justify;">
+          <a href="https://www.guru99.com/database-design.html">Guru99: Database Design Tutorial</a>
+        </p>
+      <p class="text-center" style="text-align:justify;">
+        <a href="https://www.db-book.com/db7/">Widyawati Susman: Query Processing</a>
+      </p>
+      
+    </main>
+    <br><br><br>
+      <hr color="purple" size="50" noshade align="center" width="90px">
+
+
+    <footer class="footer-area">
+      <div class="container">
+        <div class="logo-footer">
+          <div class="site-logo text-center py-4">
+            <a><img src="img/Logo.svg" alt="logo-footer"/></a>
+          </div>
+          <div class="social text-center">
+            <h5 class="text-uppercase"><b>Follow Me</b></h5>
+            <a href="https://www.facebook.com/Sri.Fatra" target="_blank"
+              ><i class="fab fa-facebook social-media"></i
+            ></a>
+            <a href="https://www.instagram.com/ayu.fatra/" target="_blank"
+              ><i class="fab fa-instagram social-media"></i
+            ></a>
+            <a href="https://twitter.com/Sri_Fatra" target="_blank"
+              ><i class="fab fa-twitter social-media"></i
+            ></a>
+          </div>
+          <div class="copyrights text-center">
+            <p class="para">
+              <B>© SRI RAHAYU INDAL FATRA, 2020</B>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Start Back-Top -->
+      <div id="back-top">
+        <a title="Go Up" href="#">
+          <i class="fas fa-arrow-up"></i>
+        </a>
+      </div>
+      <!-- End Back-Top -->
+    </footer>
+
+    <!-- jQuery JS file -->
+    <script src="js/jquery.3.4.1.js"></script>
+
+    <!-- Bootstrap JS file -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Isotope JS library -->
+    <script src="vendor/isotope/isotope.min.js"></script>
+
+    <!-- Magnific Popup Script file -->
+    <script src="vendor/Magnific-Popup/dist/jquery.magnific-popup.min.js"></script>
+
+    <!-- Owl-carousel JS file -->
+    <script src="vendor/owl-carousel/js/owl.carousel.min.js"></script>
+
+    <!-- ScrollReveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- Aos Animate -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+      AOS.init();
+    </script>
+
+    <!-- Custom JS file -->
+    <script src="js/main.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
