@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- Icon Web -->
+    <link rel="icon" href="img/favicon.png" />
+    <title>Transaction - AyuFatra</title>
+
+    <!-- Bootstrap CSS file -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- Font Awesome Icons CSS file -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- Custom CSS file -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Responsive CSS file -->
+    <link rel="stylesheet" href="css/responsive.css" />
+    <!-- Aos Animate -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Start Preloader Area -->
+    <div class="preloader-area">
+      <div class="ring-loader">
+        Loading
+        <span class="span-ring"></span>
+      </div>
+    </div>
+    <!-- End Preloader Area -->
+
+    <!-- Start Header Area -->
+    <header class="header_area">
+      <div class="main-menu">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <a class="navbar-brand" href="profile-card.html"
+            ><img src="img/Logo.svg" alt="logo"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="mr-auto"></div>
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Basis Data II
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="PemrosesanQuery.html">Pemrosesan Query </a>
+                  <a class="dropdown-item " href="EvaluationPlan.html">Evaluation Plan</a>
+                  <a class="dropdown-item " href="DesainDatabase.html">Proses Desain Database</a>
+                  <a class="dropdown-item " href="Transactions.html">Transaction (ACID Requirement)</a>
+                </div>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- End Header Area -->
+
+    <!-- Start Main Area -->
+    <main class="site-main"><br>
+      <div class="container" data-aos="zoom-in" data-aos-duration="3000" align="center">
+        <img src="img/ACID.JPG" width="100%" height="80%" style="display: block; margin: auto;"><br>
+    </div>
+      
+      <br>
+          <hr color="purple" size="50" noshade align="center" width="900px"><br>
+          <div class="container mb-5" data-aos="zoom-in" data-aos-duration="1000">
+            <img src="img/panah.png" width="5%" height="5%" style="display: block; margin: auto;">
+        </div>
+          
+      <!-- my Tasks -->
+      <section class="nomor1">
+        <div class="container">
+         
+          <p class="text-uppercase text-center title-text">
+            <b>TRANSACTION</b>
+          </p>
+              <p>
+                <strong style="color:rebeccapurple"><h5><br>TRANSAKSI DATABASE</h5></strong>
+              </p>
+              <p style="text-align:justify;">
+                ​Dalam DBMS (Database Management System) terdapat istilah transaction. Transaction dalam DBMS bertujuan untuk menggabungkan beberapa statement perubahan ke dalam database menjadi satu kesatuan. Dilakukan semuanya atau tidak sama sekali (<I>all or nothing</I>) sehingga tidak terjadi ketidakkonsistenan data.
+                Biasanya, transaksi dimulai oleh program pengguna yang ditulis dalam bahasa manipulasi data tingkat tinggi (biasanya SQL), atau bahasa pemrograman (misalnya, C++ atau Java), dengan akses database yang disematkan di JDBC atau ODBC. Transaksi dibatasi oleh pernyataan (atau pemanggilan fungsi) dari formulir memulai transaksi dan mengakhiri transaksi. Transaksi terdiri dari semua operasi yang dijalankan antara transaksi awal dan transaksi akhir.
+              
+              <p>
+                <strong style="color:rebeccapurple"><h5><br>FUNGSI UTAMA TRANSAKSI</h5></strong>
+              </p>
+              <p style="text-align:justify;">
+                Transaksi memiliki 2 fungsi utama, yaitu:
+                <ol style="text-align: justify;">
+                  <li style="font-weight: bold;">Menyediakan Reliabilitas</li>
+                  Artinya yaitu jika terjadi kesalahan pada salah satu statement maka seluruh perubahan akan digagalkan. Sehingga data yang tersimpan benar-benar reliable (dapat diandalkan).
+                  <li style="font-weight: bold;">Melakukan Isolasi</li>
+                  Artinya yaitu satu transaksi harus di proses satu persatu. Sehingga tidak ada kemungkinan 2 program mengakses atau bahkan mengubah data sekaligus.
+                </ol>
+              <p>
+
+              <p>
+                <strong style="color:rebeccapurple"><h5><br>JENIS OPERASI PADA TRANSAKSI</h5></strong>
+              </p>
+              <p style="text-align:justify;">
+                Dalam penggunaannya, Transaksi membutuhkan 2 operasi, yaitu:
+                <ol style="text-align: justify;">
+                  <li style="font-weight: bold;">read(X)</li>
+                  Artinya operasi ini akan mentransfer data item X dari database ke local buffer yang dimiliki oleh transaksi yang mengeksekusi operasi pembacaan (read).
+                  <li style="font-weight: bold;">write(X)</li>
+                  Artinya operasi ini akan mentransferkan data item X dari local buffer dari aksi transaksi yang mengeksekusi perintah penuilisan kembali ke database (write).
+                </ol>
+              <p>
+
+              <p>
+                <strong style="color:rebeccapurple"><h5><br>STATUS TRANSAKSI</h5></strong>
+              </p>
+              <p style="text-align:justify;">
+                State merupakan bagian dari transaksi. Transaksi akan benar-benar dikatakan sukses (<i>successfully completion</i>) apabila transaksi berada pada salah satu dari state berikut:
+                <br><br>
+                <img src="img/state.png" width="80%" height="90%" style="display: block; margin: auto;">
+                <br>
+                <p style="text-align:center; color: rgb(77, 35, 116);" >(<i>Diagram Transisi Status untuk Transaksi Database</i>)<p>
+                
+                <ol style="text-align: justify;">
+                  <li style="font-weight: bold;">Active State</li>
+                  Dalam status ini, Sebuah transaksi masuk ke dalam keadaan aktif saat proses eksekusi dimulai. Selama status ini, operasi baca atau tulis dapat dilakukan.
+                  <li style="font-weight: bold;">Partially Committed</li>
+                  Ketika sebuah transaksi menjalankan operasi akhirnya, ia dikatakan berada dalam status <I>partially committed</I>.
+                  <li style="font-weight: bold;">Committed State</li>
+                  Ketika transaksi berkomitmen untuk menyatakan, itu telah menyelesaikan eksekusinya dengan sukses. Selain itu, semua perubahannya dicatat ke database secara permanen.
+                  <li style="font-weight: bold;">Failed State</li>
+                  Sebuah transaksi dianggap gagal ketika salah satu pemeriksaan gagal atau jika transaksi dibatalkan saat dalam keadaan aktif.
+                  <li style="font-weight: bold;">Terminated State</li>
+                  Status transaksi mencapai status dihentikan ketika transaksi tertentu yang keluar dari sistem tidak dapat dimulai ulang.
+                </ol>
+              <p>
+              
+              <br>
+                <hr color="purple" size="50" noshade align="center" width="900px">
+              <br>
+              <p class="text-uppercase text-center title-text">
+                <b>ACID PROPERTIES</b>
+              </p>
+                
+              <p>
+                <strong style="color:rebeccapurple"><h5><br>Apa itu ACID?</h5></strong>
+              </p>
+              <p style="text-align:justify;">
+              ACID adalah singkatan dari <b>A</b>tomicity, <b>C</b>onsistency, <b>I</b>solation, dan <b>D</b>urability. Properti ACID digunakan untuk menjaga integritas database selama pemrosesan transaksi untuk memastikan akurasi, kelengkapan, dan integritas data.​ 
+              Untuk lebih mengetahui apa itu ACID yaitu sebagai berikut:
+              
+              <ol style="text-align: justify;">
+                <li style="font-weight: bold;">Atomicity</li>
+                Properti ini menyatakan bahwa transaksi harus diperlakukan sebagai unit atom, yaitu, semua operasinya dijalankan atau tidak sama sekali. Tidak boleh ada status dalam database di mana transaksi dibiarkan selesai sebagian. States harus didefinisikan baik sebelum eksekusi transaksi atau setelah eksekusi/kegagalan transaksi.
+                <li style="font-weight: bold;">Consistency</li>
+                Database harus tetap dalam keadaan konsisten setelah transaksi apa pun. Tidak ada transaksi yang berdampak buruk pada data yang berada di database. Jika database berada dalam keadaan yang konsisten sebelum eksekusi transaksi, ia juga harus tetap konsisten setelah eksekusi transaksi.
+                <li style="font-weight: bold;">Isolation</li>
+                Dalam sistem database di mana lebih dari satu transaksi dijalankan secara bersamaan dan paralel, properti isolasi menyatakan bahwa semua transaksi akan dilakukan dan dijalankan seolah-olah itu adalah satu-satunya transaksi dalam sistem. Tidak ada transaksi yang akan mempengaruhi keberadaan transaksi lainnya.
+                <li style="font-weight: bold;">Durability</li>
+                Database harus cukup tahan lama untuk menyimpan semua pembaruan terkini bahkan jika sistem gagal atau dimulai ulang. Jika suatu transaksi memperbarui sebagian data dalam database dan melakukan, maka database akan menyimpan data yang dimodifikasi. Jika transaksi dilakukan tetapi sistem gagal sebelum data dapat ditulis ke disk, maka data tersebut akan diperbarui setelah sistem kembali berfungsi.
+              </ol>
+
+              <strong style="color:rebeccapurple;"><h5><br>CONTOH KASUS ACID</h5></strong>
+              <p style="text-align: justify;">
+                Di bawah ini merupakan contoh kasus dari operasi yang harus dieksekusi dengan transaksi yang membutuhkan requirement ACID. sAdapun kasus yang diangkat yaitu "Transaksi Antar Bank". Misalnya si A ingin mentransfer uangnya dari rekening pribadinya sebesar Rp.100.000 (X) ke rekening tempat ia membeli barang B (Y).
+             
+                <ol style="text-align: justify;">
+                </ol>
+                <b>Berikut gambaran proses transaksinya:</b>
+                <ol style="text-align: justify;">
+                  <li>Baca saldo akun si A</li>
+                  <li>Kurangi jumlah dari saldo si A</li>
+                  <li>Tulis sisa saldo ke akun si A </li>
+                  <li>Baca saldo akun B </li>
+                  <li>Tambahkan jumlah tersebut ke saldo B</li>
+                  <li>Tulis saldo baru yang diperbarui ke akun B</li>
+                </ol>
+                <b>Adapun di DBMS, proses transaksi di atas dituliskan sebagai berikut:</b>
+                <ol style="text-align: justify;">
+                <li>read(x)</li>
+                <li>x := x – 100000</li>
+                <li>write(x)</li>
+                <li>read(y)</li>
+                <li>y := y + 100000</li>
+                <li>write(y)</li>
+                </ol>
+                <b>Dari contoh kasus di atas, properti ACID requirement nya dapat dinyatakan sebagai berikut:</b>
+                <ol style="text-align: justify;">
+                  <li style="color: darkmagenta;">Atomicity Requirements</li>
+                  Jika transaksi gagal diantara tahap ke-3 dan tahap ke-6, maka sistem harus memastikan bahwa perubahan yang terjadi tidak disimpan ke database, atau akan terjadi inkonsistensi data. Dengan kata lain, selesaikan transaksi atau tidak sama sekali.
+                  <li style="color: darkmagenta;">Consistency Requirements</li>
+                  Jumlah dari rekening x + y harus tetap, tidak berubah dengan dijalankannya proses transaksi tersebut.
+                  <li style="color: darkmagenta;">Isolation Requirements</li>
+                  Pada saat eksekusi transaksi selesai dilaksanakan, dan user yang melakukan transaksi sudah diberitahu bahwa transfer yang dilakukannya sukses, maka harus dipastikan bahwa tidak ada kesalahan sistem yang akan terjadi yang menyebabkan hilangnya data yang berkaitan dengan proses transfer data tersebut.
+                  <li style="color: darkmagenta;">Durability Requirements</li>
+                  Jika transaksi gagal diantara tahap ke-3 dan tahap ke-6, maka sistem harus memastikan bahwa perubahan yang terjadi tidak disimpan ke database, atau akan terjadi inkonsistensi data. Dengan kata lain, selesaikan transaksi atau tidak sama sekali.
+                </ol>
+              </p>
+
+              <strong style="color:rebeccapurple;"><h5><br>LANGKAH YANG DITEMPUH PADA TRANSAKSI CONTOH KASUS</h5></strong>
+                <ul style="text-align: justify;">
+                  <li>Transaksi ini dimulai dalam keadaan state sedang active. Pada saat menyelesaikan statement terakhirnya, transaksi masuk ke kondisi partially committed.</li>
+                  <li>Setelah itu dalam keadaan state, transaksi telah selesai dieksekusi namun masih memiliki kemungkinan untuk dibatalkan (aborted) ketika ia memasuki state aborted, karena output yang sesungguhnya masih berada di tempat penyimpanan sementara/main memory, dan karenanya kesalahan pada hardware dapat mempengaruhi kesuksesan dari penyelesaian transaksi.
+                     Jika step-step transaksi telah memasuki state aborted, di titik ini kita biasanya dihadapkan pada 2 opsi, yaitu:
+                    <ol style="text-align: justify;">
+                      <li style="color: darkmagenta;">Mengulangi Transaksi:</li>
+                      Sistem dapat mengulangi transaksi atau biasa disebut <i>restart the transaction</i>, tapi hanya jika transaksi dibatalkan karena adanya kerusakan hardware atau hardware tersebut bukan berasal dari logika internal dari transaksinya.
+                      <li style="color: darkmagenta;">Menghapus Transaksi:</li>
+                      Sistem dapat menghapus transaksi atau biasa disebut <i>kill the transaction</i>. Hal ini biasanya terjadi karena adanya kesalahan logika internal yang dapat dibenahi hanya dengan menulis kembali program aplikasinya, atau karena inputan yang tidak baik, atau karena data yang diinginkan tidak ada di database.
+                    </ol></li>
+                  <li>Sistem basis data kemudian menuliskan informasi yang dibutuhkan (write) ke dalam disk, bahwa perubahan yang dilakukan oleh transaksi dapat dibuat kembali pada saat sistem restart jika terjadi kegagalan pada sistem.</li>
+                  <li>Pada saat informasi terakhir dituliskan, maka transaksi masuk kondisi state committed.</li>
+                  <li>Sebuah transaksi akan memasuki kondisi state failed jika setelah sistem melakukan pemeriksaan, transaksi tidak dapat lagi diproses dengan eksekusi normal (misal karena kerusakan hardware atau kesalahan logika).</li>
+                  <li>Jika berada di dalam kondisi tersebut, maka transaksi harus di rolled back, dan kemudian selanjutnya memasuki kondisi state aborted (pembatalan transaksi).</li>
+                </ul>
+              
+
+              
+              
+              
+      
+                                                
+      <br><br>
+      <hr color="purple" size="50" noshade align="center" width="900px">
+                                   
+      <br>
+      <br>
+      <h3 class="text-uppercase text-center title-text">
+        <b>Referensi</b>
+      </h3>
+      <br>
+      <p class="text-center" style="text-align:justify;">
+        <a href="https://beginnersbook.com/2017/09/transaction-management-in-dbms/">Beginnersbook: Transaction Management in DBMS</a>
+      </p>
+      <p class="text-center" style="text-align:justify;">
+        <a href="https://www.geeksforgeeks.org/acid-properties-in-dbms/">Geeksforgeeks: ACID Properties in DBMS</a>
+      </p>
+      <p class="text-center" style="text-align:justify;">
+        <a href="https://www.guru99.com/dbms-transaction-management.html">Guru99: DBMS Transaction Management: ACID Properties, Schedule</a>
+      </p>
+      <p class="text-center" style="text-align:justify;">
+        <a href="https://idbigdata.com/official/explandict/acid/#:~:text=Singkatan%20dari%20Atomicity%2C%20Consistency%2C%20Isolation,penting%20dari%20teori%20database%20transaksional.">idBigData: ACID</a>
+      </p>
+      <p class="text-center" style="text-align:justify;">
+        <a href="https://ifhayz.wordpress.com/2010/10/23/database-transaction/"> Ifhayz Blog: Database Transaction</a>
+      </p>
+      <p class="text-center" style="text-align:justify;">
+        <a href="https://iteritory.com/acid-properties-in-transactions-dbms/">Iteritory.com: ACID Properties in Transactions, DBMS</a>
+      </p>
+      <p class="text-center" style="text-align:justify;">
+        <a href="https://www.tutorialspoint.com/dbms/dbms_transaction.htm">Tutorialspoint: DBMS - Transaction</a>
+      </p>
+      <p class="text-center" style="text-align:justify;">
+        <a href="https://qastack.id/programming/3740280/how-do-acid-and-database-transactions-work">QA Stack: Bagaimana cara kerja ACID dan transaksi basis data?</a>
+      </p>
+        
+        
+        
+       
+        
+        
+        
+      
+    </main>
+    <br><br><br>
+      <hr color="purple" size="50" noshade align="center" width="90px">
+
+
+    <footer class="footer-area">
+      <div class="container">
+        <div class="logo-footer">
+          <div class="site-logo text-center py-4">
+            <a><img src="img/Logo.svg" alt="logo-footer"/></a>
+          </div>
+          <div class="social text-center">
+            <h5 class="text-uppercase"><b>Follow Me</b></h5>
+            <a href="https://www.facebook.com/Sri.Fatra" target="_blank"
+              ><i class="fab fa-facebook social-media"></i
+            ></a>
+            <a href="https://www.instagram.com/ayu.fatra/" target="_blank"
+              ><i class="fab fa-instagram social-media"></i
+            ></a>
+            <a href="https://twitter.com/Sri_Fatra" target="_blank"
+              ><i class="fab fa-twitter social-media"></i
+            ></a>
+          </div>
+          <div class="copyrights text-center">
+            <p class="para">
+              <B>© SRI RAHAYU INDAL FATRA, 2020</B>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Start Back-Top -->
+      <div id="back-top">
+        <a title="Go Up" href="#">
+          <i class="fas fa-arrow-up"></i>
+        </a>
+      </div>
+      <!-- End Back-Top -->
+    </footer>
+
+    <!-- jQuery JS file -->
+    <script src="js/jquery.3.4.1.js"></script>
+
+    <!-- Bootstrap JS file -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Isotope JS library -->
+    <script src="vendor/isotope/isotope.min.js"></script>
+
+    <!-- Magnific Popup Script file -->
+    <script src="js/jquery.magnific-popup.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+
+    <!-- Magnific Popup Script file -->
+    <script src="vendor/Magnific-Popup/dist/jquery.magnific-popup.min.js"></script>
+
+    <!-- Owl-carousel JS file -->
+    <script src="vendor/owl-carousel/js/owl.carousel.min.js"></script>
+
+    <!-- ScrollReveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- Aos Animate -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+      AOS.init();
+    </script>
+
+    <!-- Custom JS file -->
+    <script src="js/main.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
