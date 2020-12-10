@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- Icon Web -->
+    <link rel="icon" href="img/favicon.png" />
+    <title>DFA-NFA - AyuFatra</title>
+
+    <!-- Bootstrap CSS file -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- Font Awesome Icons CSS file -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- Custom CSS file -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Responsive CSS file -->
+    <link rel="stylesheet" href="css/responsive.css" />
+    <!-- Aos Animate -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Start Preloader Area -->
+    <div class="preloader-area">
+      <div class="ring-loader">
+        Loading
+        <span class="span-ring"></span>
+      </div>
+    </div>
+    <!-- End Preloader Area -->
+
+    <!-- Start Header Area -->
+    <header class="header_area">
+      <div class="main-menu">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <a class="navbar-brand" href="profile-card.html"
+            ><img src="img/Logo.svg" alt="logo"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="mr-auto"></div>
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Finite Automata (NFA & DFA)
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="PengantarTBO.html">Pengantar TBO</a>
+                  <a class="dropdown-item " href="NotasiBig-O.html">Notasi Big-O</a>
+                  <a class="dropdown-item " href="DFA-NFA.html">Finite Automata (NFA & DFA)</a>
+                </div>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- End Header Area -->
+
+     <!-- Start Main Area -->
+     <main class="site-main">
+       <br>
+      <div class="container" data-aos="zoom-in" data-aos-duration="3000" align="center">
+        <img src="img/ha3.JPG" width="100%" height="80%" style="display: block; margin: auto;"><br>
+    </div>
+      <br>
+      <hr color="purple" size="50" noshade align="center" width="900px"><br>
+      <div class="container mb-5" data-aos="zoom-in" data-aos-duration="1000">
+        <img src="img/panah.png" width="5%" height="5%" style="display: block; margin: auto;"> </div>
+      <!-- my Tasks -->
+      
+      <section class="nomor1">
+        <div class="container">
+         
+          <p class="text-uppercase text-center title-text">
+            <b>OVERVIEW</b>
+          </p>
+          <p style="text-align:justify;">
+            <i>Finite Automata</i> adalah mesin automata dari suatu Bahasa regular. <i>Finite Automata</i> memiliki 
+            jumlah <i>state</i> yang banyaknya berhingga dan dapat berpindah-pindah dari suatu <i>state</i> ke 
+            <i>state</i> yang lainnya. <i>Finite Automata</i> dibagi menjadi <i>Deterministic Finite Automata</i> (DFA) dan 
+            <i>Non Deterministic Finite Automata</i> (NFA).
+          </p>
+          <br>
+          <hr color="purple" size="50" noshade align="center" width="1200px">
+          <br>
+
+          <p class="text-uppercase text-center title-text">
+            <b>DEFINISI DFA DAN NFA</b>
+          </p>
+          <p>
+            <strong style="color:rebeccapurple"><h5>DFA (<i>Deterministic Finite Automata</i>)</h5></strong>
+        </p>
+            <p style="text-align:justify;">
+              DFA adalah suatu mesin yang terdiri dari <i>finite number of state</i>, Salah satu <i>state</i> akan berfungsi 
+              sebagai <i>intitial state</i>. DFA juga mensyaratkan minimal terdapat satu <i>accepted state</i>. Mesin akan menerima 
+              <i>input stream</i> berupa simbol atau alfabet yang datang secara <i>sequential</i>. Mekanisme trasisi pada mesin akan 
+              memperhatikan <i>current input</i> dan <i>current state</i>. DFA adalah 5 tupel dimana:
+              <ul style="text-align: justify;">
+                <li>Q : himpunan state atau kedudukan</li>
+                <li>Σ : himpunan simbol input</li>
+                <li>∂ : fungsi transisi, dimana ∂ € Q x -> Σ Q</li>
+                <li>S : State awal (<i>intitial state</i>)</li>
+                <li>F : himpunan state akhir (<i>Final State</i>)</li>
+              </ul>
+            </p>
+
+          <p>
+            <strong style="color:rebeccapurple"><h5>NFA (<i>Nondeterministic Finite Automata</i>)</h5></strong>
+          </p>
+              <p style="text-align:justify;">
+                NFA adalah salah satu bagian dari otomata berhingga atau FSA (<i>Finite State Automata</i>). 
+                Pada NFA dimungkinkan satu simbol menimbulkan transisi ke lebih dari satu kondisi dan memberikan 
+                beberapa kemungkinan gerakan sehingga keluarannya tidak dapat dipastikan. Selain itu dimungkinkan juga 
+                terjadinya transisi spontan atau transisi –ε. NFA didefenisikan sebagai M yang merupakan sebuah koleksi 
+                dari 5 obyek (Q, Σ, s, F, ∆) dimana:
+                <ul style="text-align: justify;">
+                  <li>Q adalah sebuah himpunan hingga dari kedudukan-kedudukan.</li>
+                  <li>Σ adalah sebuah abjad masukan.</li>
+                  <li>s adalah salah satu kedudukan di dalam Q yang ditetapkan sebagai kedudukan permulaan.</li>
+                  <li>F adalah sebuah koleksi dari kedudukan-kedudukan yang diterima atau final (koleksi / himpunan dari kondisi akhir).</li>
+                  <li>∆ adalah sebuah relasi pada (Q x Σ) x Q dan dinamakan relasi transisi.</li>
+                </ul>
+              </p>
+          
+              <br>
+          <hr color="purple" size="50" noshade align="center" width="1200px">
+          <br>
+         
+          <p class="text-uppercase text-center title-text">
+            <b>TAHAPAN MENGKONVERSI NFA KE DFA</b>
+          </p>
+          
+              <p style="text-align:justify;">
+                Adapun tahapan dari mengonversi NFA ke DFA yaitu sebagai berikut:
+                <ul style="text-align: justify;">
+                  <li>Langkah 1: Awalnya Q'= ϕ</li>
+                  <li>Langkah 2: Tambahkan q0 NFA ke Q'. Kemudian temukan transisi dari state awal ini</li>
+                  <li>Langkah 3: Dalam Q', temukan kemungkinan set of state untuk setiap simbol input. Jika kumpulan state ini tidak ada di Q', maka tambahkan ke Q'</li>
+                  <li>Langkah 4: Di DFA, final state adalah semua state bagian yang berisi F (final state NFA)</li>
+                </ul>
+              </p>
+              <br>
+              <hr color="purple" size="50" noshade align="center" width="1200px">
+              <br>
+
+              <p class="text-uppercase text-center title-text">
+                <b>KONVERSI NFA KE DFA</b>
+              </p>
+              
+              <p style="text-align:justify;">
+                 Pada bagian ini, kita akan membahas metode untuk mengubah NFA menjadi DFA yang setara. 
+                 Di NFA, ketika input tertentu diberikan ke status saat ini, mesin pergi ke beberapa status. 
+                 Ini dapat memiliki nol, satu atau lebih dari satu gerakan pada simbol input tertentu. 
+                 Di sisi lain, di DFA, ketika input tertentu diberikan ke status saat ini, mesin hanya beralih ke satu 
+                 status. DFA hanya memiliki satu gerakan pada simbol masukan tertentu.
+                 Misalkan, M = (Q, ∑, δ, q0, F) adalah NFA yang menerima bahasa L (M). Harus ada DFA ekivalen yang 
+                 dilambangkan dengan M '= (Q', ∑ ', q0', δ ', F') sehingga L (M) = L (M ').
+              </p>
+              <br>
+              <hr color="purple" size="50" noshade align="center" width="1200px">
+              <br>
+              <p class="text-uppercase text-center title-text">
+                <b>CONTOH KASUS</b>
+              </p>
+              <p style="text-align:justify;">
+                <b>Konversi NFA berikut menjadi DFA!</b>
+                <br>
+                <img src="img/f1.png" width="50%" height="50%" style="display: block; margin: auto;">
+                <br>
+              <p style="text-align:justify;">
+               <b> Tabel transisi:</b>
+                <table border="1" width="800px" style="margin: auto;" height="150px">
+                  <tr align="center" style="background-color: #663399; color: white;">
+                      <th><b>State</b></th>
+                      <th><b>a</b></th>
+                      <th><b>b</b></th>
+                  </tr>
+                  <tr align="center">
+                      <td>-> q<sub>0</sub></td>
+                      <td>{q<sub>0</sub>, q<sub>1</sub>}</td>
+                      <td>q<sub>0</sub></td>
+                  </tr>
+                  <tr align="center">
+                    <td>q<sub>1</sub></td>
+                    <td>-</td>
+                    <td>q<sub>2</sub></td>
+                </tr>
+                <tr align="center">
+                  <td>*q<sub>2</sub></td>
+                  <td>-</td>
+                  <td>-</td>
+              </tr>
+              </table>
+              <br>
+
+              <p style="text-align:justify;">
+                <b>Sekarang kita akan mendapatkan transisi δ' untuk status q<sub>0:</sub>.</b>
+              <p style="text-align:justify; white-space:pre; line-height: 3px;">
+                δ'([q<sub>0</sub>], a) = [q<sub>0</sub>, q<sub>1</sub>]    (new state generated) <br><br><br><br><br><br><br><br>
+                δ'([q<sub>0</sub>], b) = [q<sub>0</sub>] <br><br><br><br>
+
+              <br><p style="text-align:justify;">
+                <b>Transisi δ' untuk status q<sub>1</sub> diperoleh sebagai:</b>
+              <p style="text-align:justify; white-space:pre; line-height: 3px;">
+                δ'([q<sub>1</sub>], a) = [-] <br><br><br><br><br><br><br><br>
+                δ'([q<sub>1</sub>], b) = [q<sub>2</sub>] <br><br><br><br>
+              
+              <br><p style="text-align:justify;">
+                <b>Transisi δ' untuk status q<sub>2</sub> diperoleh sebagai:</b>
+              <p style="text-align:justify; white-space:pre; line-height: 3px;">
+                δ'([q<sub>2</sub>], a) = [-] <br><br><br><br><br><br><br><br>
+                δ'([q<sub>2</sub>], b) = [-] <br><br><br><br>
+
+              <br><p style="text-align:justify; ">
+                <b>Sekarang kita akan mendapatkan transisi δ' pada [q<sub>0</sub>, q<sub>1</sub>]:</b>
+              <p style="text-align:justify; white-space:pre; line-height: 3px;">
+                δ'(q<sub>0</sub>, q<sub>1</sub>], a)     = δ(q<sub>0</sub>, a) ∪ δ(q<sub>1</sub>, a) <br><br><br><br><br><br><br><br>
+                                        = {q<sub>0</sub>, q<sub>1</sub>} ∪ {-} <br><br><br><br><br><br><br><br>
+                                        = [q<sub>0</sub>, q<sub>1</sub>] <br><br><br><br><br><br><br><br> <br>
+
+                δ'(q<sub>0</sub>, q<sub>1</sub>], b)	= δ(q<sub>0</sub>, b) ∪ δ(q<sub>1</sub>, b) <br><br><br><br><br><br><br><br>
+                                        = {q<sub>0</sub>} ∪ {q<sub>2</sub>} <br><br><br><br><br><br><br><br>
+                                        = [q<sub>0</sub>, q<sub>2</sub>]     (new state generated) <br><br><br><br>
+              </p>
+
+              <p style="text-align:justify; ">
+                <b>Sekarang kita akan mendapatkan transisi δ' pada [q<sub>0</sub>, q<sub>2</sub>]:</b>
+              <p style="text-align:justify; white-space:pre; line-height: 3px;">
+                δ'(q<sub>0</sub>, q<sub>2</sub>], a)     = δ(q<sub>0</sub>, a) ∪ δ(q<sub>2</sub>, a) <br><br><br><br><br><br><br><br>
+                                        = {q<sub>0</sub>, q<sub>1</sub>} ∪ {-} <br><br><br><br><br><br><br><br>
+                                        = [q<sub>0</sub>, q<sub>1</sub>] <br><br><br><br><br><br><br><br> <br>
+
+                δ'(q<sub>0</sub>, q<sub>2</sub>], b)	= δ(q<sub>0</sub>, b) ∪ δ(q<sub>2</sub>, b) <br><br><br><br><br><br><br><br>
+                                        = {q<sub>0</sub>} ∪ {-} <br><br><br><br><br><br><br><br>
+                                        = [q<sub>0</sub>]     (new state generated) <br><br><br><br>
+              </p>
+
+              <p style="text-align:justify;">
+                <b>Keadaan [q<sub>0</sub>, q<sub>2</sub>] juga merupakan keadaan akhir karena berisi keadaan akhir q<sub>2</sub>. 
+                  Tabel transisi untuk DFA yang dibangun adalah:</b>
+                 <table border="1" width="1000px" style="margin: auto;" height="200px">
+                   <tr align="center" style="background-color: #663399; color: white;">
+                       <th><b>State</b></th>
+                       <th><b>a</b></th>
+                       <th><b>b</b></th>
+                   </tr>
+                   <tr align="center">
+                       <td>-> [q<sub>0</sub>]</td>
+                       <td>[q<sub>0</sub>,q<sub>1</sub>]</td>
+                       <td>[q<sub>0</sub>]</td>
+                   </tr>
+                   <tr align="center">
+                     <td>[q<sub>1</sub>]</td>
+                     <td>-</td>
+                     <td>[q<sub>2</sub>]</td>
+                  </tr>
+                  <tr align="center">
+                    <td>*[q<sub>2</sub>]</td>
+                    <td>-</td>
+                    <td>-</td>
+                  </tr>
+                  <tr align="center">
+                    <td>[q<sub>0</sub>,q<sub>1</sub>]</td>
+                    <td>-</td>
+                    <td>[q<sub>0</sub>,q<sub>2</sub>]</td>
+                  </tr>
+                  <tr align="center">
+                    <td>*[q<sub>0</sub>,q<sub>2</sub>]</td>
+                    <td>[q<sub>0</sub>,q<sub>1</sub>]</td>
+                    <td>[q<sub>0</sub>]</td>
+                  </tr>
+               </table>
+               <br>
+
+               <p style="text-align:justify;">
+                <b>Diagram transisi akan menjadi:</b>.
+                <br><br>
+                <img src="img/f2.png" width="80%" height="80%" style="display: block; margin: auto;">
+                
+
+                <p style="text-align:justify;">
+                  <b>Dari diagram transisi state q<sub>0</sub>, q<sub>2</sub> dan null tidak bisa mencapai dari state awal, sehingga dihasilkan DFA dengan:</b>
+                <p style="text-align:justify; white-space:pre; line-height: 3px;">
+                  Q = {q<sub>0</sub>, q<sub>0</sub>q<sub>1</sub>, q<sub>0</sub>q<sub>2</sub>} <br><br><br><br><br><br><br>
+                  ∑ = {a,b} <br><br><br><br> <br><br><br>
+                  S = q<sub>0</sub> <br><br><br><br> <br><br><br>
+                  F = q<sub>0</sub>q<sub>2</sub> <br>
+
+                <p style="text-align:justify;">
+                  <b>Diagram transisi:</b>
+                  <br>
+                  <img src="img/f3.png" width="50%" height="50%" style="display: block; margin: auto;">
+               
+              </p>  
+        </div>
+      
+        <br>
+          <hr color="purple" size="100" noshade align="center" width="1200px">
+
+          <br>
+      <h3 class="text-uppercase text-center title-text">
+        <b>Referensi</b>
+      </h3>
+      <br>
+      <p class="text-center" style="text-align:justify;">
+        <a href="https://socs.binus.ac.id/2019/12/21/teknik-kompilasi-konversi-nfa-ke-dfa/">Binus University: Teknik Konpilasi - Konfersi NFA ke DFA</a>
+      </p>
+      <p class="text-center" style="text-align:justify;">
+        <a href="https://www.javatpoint.com/automata-conversion-from-nfa-to-dfa">JavaTPoint: Conversion from NFA to DFA</a>
+      </p>
+      <p class="text-center" style="text-align:justify;">
+        <a href="https://sikola.unhas.ac.id/">TBO: PPT Finite State Otomata in SIKOLA Unhas</a>
+      </p>
+      <p class="text-center" style="text-align:justify;">
+        <a href="https://www.belajarcpp.com/artikel/penjelasan-dan-contoh-program-dfa-deterministic-finite-automaton-dengan-bahasa-c/">Wildan: Penjelasan dan Contoh Program DFA</a>
+      </p>
+     </div>
+      </section>
+
+      <br><br><br>
+      <hr color="purple" size="50" noshade align="center" width="90px">
+
+    
+    <footer class="footer-area">
+      <div class="container">
+        <div class="logo-footer">
+          <div class="site-logo text-center py-4">
+            <a><img src="img/Logo.svg" alt="logo-footer"/></a>
+          </div>
+          <div class="social text-center">
+            <h5 class="text-uppercase"><b>Follow Me</b></h5>
+            <a href="https://www.facebook.com/Sri.Fatra" target="_blank"
+              ><i class="fab fa-facebook social-media"></i
+            ></a>
+            <a href="https://www.instagram.com/ayu.fatra/" target="_blank"
+              ><i class="fab fa-instagram social-media"></i
+            ></a>
+            <a href="https://twitter.com/Sri_Fatra" target="_blank"
+              ><i class="fab fa-twitter social-media"></i
+            ></a>
+          </div>
+          <div class="copyrights text-center">
+            <p class="para">
+              <B>© SRI RAHAYU INDAL FATRA, 2020</B>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Start Back-Top -->
+      <div id="back-top">
+        <a title="Go Up" href="#">
+          <i class="fas fa-arrow-up"></i>
+        </a>
+      </div>
+      <!-- End Back-Top -->
+    </footer>
+
+    <!-- jQuery JS file -->
+    <script src="js/jquery.3.4.1.js"></script>
+
+    <!-- Bootstrap JS file -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Isotope JS library -->
+    <script src="vendor/isotope/isotope.min.js"></script>
+
+    <!-- Magnific Popup Script file -->
+    <script src="js/jquery.magnific-popup.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    
+    <!-- Magnific Popup Script file -->
+    <script src="vendor/Magnific-Popup/dist/jquery.magnific-popup.min.js"></script>
+
+    <!-- Owl-carousel JS file -->
+    <script src="vendor/owl-carousel/js/owl.carousel.min.js"></script>
+
+    <!-- ScrollReveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- Aos Animate -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+      AOS.init();
+    </script>
+
+    <!-- Custom JS file -->
+    <script src="js/main.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
