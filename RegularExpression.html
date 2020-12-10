@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- Icon Web -->
+    <link rel="icon" href="img/favicon.png" />
+    <title>Regex - AyuFatra</title>
+
+    <!-- Bootstrap CSS file -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- Font Awesome Icons CSS file -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- Custom CSS file -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Responsive CSS file -->
+    <link rel="stylesheet" href="css/responsive.css" />
+    <!-- Aos Animate -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Start Preloader Area -->
+    <div class="preloader-area">
+      <div class="ring-loader">
+        Loading
+        <span class="span-ring"></span>
+      </div>
+    </div>
+    <!-- End Preloader Area -->
+
+    <!-- Start Header Area -->
+    <header class="header_area">
+      <div class="main-menu">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <a class="navbar-brand" href="profile-card.html"
+            ><img src="img/Logo.svg" alt="logo"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="mr-auto"></div>
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  TEORI BAHASA DAN OTOMATA
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="PengantarTBO.html">Pengantar TBO</a>
+                  <a class="dropdown-item " href="NotasiBig-O.html">Notasi Big-O</a>
+                  <a class="dropdown-item " href="DFA-NFA.html">Finite Automata (NFA & DFA)</a>
+                  <a class="dropdown-item " href="RegularExpression.html">Regular Expression</a>
+                </div>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- End Header Area -->
+
+     <!-- Start Main Area -->
+     <main class="site-main">
+       <br>
+      <div class="container" data-aos="zoom-in" data-aos-duration="3000" align="center">
+        <img src="img/regex.JPG" width="100%" height="80%" style="display: block; margin: auto;"><br>
+    </div>
+      <br>
+      <hr color="purple" size="50" noshade align="center" width="900px"><br>
+      <div class="container mb-5" data-aos="zoom-in" data-aos-duration="1000">
+        <img src="img/panah.png" width="5%" height="5%" style="display: block; margin: auto;"> </div>
+      <!-- my Tasks -->
+      
+      <section class="nomor1">
+        <div class="container">
+         
+          <p class="text-uppercase text-center title-text">
+            <b>REGULAR EXPRESSION</b>
+          </p>
+          <p style="text-align:justify;">
+            Regex adalah singkatan dari <i>Regular Expresion</i>. Regex merupakan sebuah teks (<i>string</i>) yang 
+            mendefinisikan sebuah pola pencarian sehingga dapat membantu kita untuk melakukan <i>matching</i> (pencocokan), 
+            <i>locate</i> (pencarian), dan manipulasi teks. <i>Regular expressions</i> biasa juga dikatakan sebagai “bahasa 
+            pemrograman”, dimana kita mengekspresikan beberapa aplikasi penting, seperti aplikasi <i>text-search</i> atau 
+            komponen <i>compiler</i>. <i>Regular expression</i> sangat berhubungan dengan <i>nondeterministic finite automata</i> 
+            dan bisa dikatakan sebagai alternatif “<i>user-friendly</i>” kepada notasi NFA untuk mendeskripsikan komponen 
+            perangkat lunak. <br><br>
+            Bagaimanapun, <i>regular expression</i> menawarkan sesuatu yang automata tidak bisa tawarkan, yaitu cara deklaratif 
+            untuk mengekspresikan <i>string</i> yang ingin kita terima. Jadi, <i>regular expression</i> disajikan sebagai 
+            bahasa <i>input</i> untuk berbagai sistem yang memproses <i>string</i>. contohnya termasuk:
+            <ul style="text-align: justify;">
+              <li><i>Search commands</i> seperti UNIX <i>grep</i> atau <i>command</i> yang setara untuk mendapatkan 
+                <i>string</i> yang terlihat di <i>web browser </i> atau sistem <i>text-formatting</i>. Sistem ini 
+                menggunakan <i>regular expression</i> serupa untuk mendeskripsikan pola yang ingin pengguna dapat 
+                dalam sebuah file.</li>
+              <li><i>Generator lexical-analyzer</i>, seperti <i>Lex</i> atau <i>Flex</i>. Sebagai pengingat bahwa
+                <i>lexical-analyzer</i> merupakan komponen dari <i>compiler</i> yang memisahkan sumber program menjadi unit logikal 
+                (yang disebut tokens) dari satu atau lebih karakter yang memiliki pembagian signifikan. Contoh dari token termasuk kata kunci 
+                (<i>keywords</i>), pengidentifikasi (<i>identifier</i>), dan tanda (<i>sign</i>) seperti + atau <=. </li>
+            </ul>
+          </p>
+          <br>
+          <hr color="purple" size="50" noshade align="center" width="1200px">
+          <br>
+
+          <p class="text-uppercase text-center title-text">
+            <b>OPERATOR REGULAR EXPRESSION</b>
+          </p>
+            <p style="text-align:justify;">
+              <i>Regular Expressions</i> berarti bahasa. Contoh mudahnya, <i>regular expressions</i> 01* + 10* berarti 
+              bahasa yang terdiri dari semua <i>string</i> yang tidak lain merupakan 0 sendiri yang diikuti oleh angka 
+              1 atau 1 sendiri yang diikuti oleh angka 0. Kita tidak mengharapkan kamu untuk tahu hingga poin ini, 
+              yaitu tentang bagaimana untuk menginterpretasikan <i>regular expressions</i>, jadi pernyataan kita 
+              tentang bahasa dari ekspresi ini musti kita terima sebab takdir untuk saat ini. <br>
+              <br>
+              Sebelum mendeskripsikan notasi <i>regular expressions</i>, kita harus tahu dan belajar mengenai tiga 
+              operasi dalam bahasa yang ditampilan oleh operator <i>regular expressions</i>. Ketiga operasi tersebut 
+              adalah:
+              <ol style="text-align: justify; ">
+                <li style="font-weight: bold; "><i>The union</i> (persatuan) dari dua bahasa </li>
+                <i>The union</i> (persatuan) dari dua bahasa, yaitu L dan M, seperti yang dinotasikan sebagai L ∪ M, 
+                  yang merupakan <i>set string</i> yang berada pada L atau M, ataupun keduanya. Contohnya, jika 
+                  L = {001, 10, 111} dan M = {∈, 001}, lalu L ∪ M = {∈, 10, 001, 111}.
+                <li style="font-weight: bold;"><i>The concatenation</i> (penggabungan) dari bahasa L dan M </li> 
+                <i>The concatenation</i> (penggabungan) dari bahasa L dan M yang meruapakan <i>set string</i> yang dapat 
+                  disusun dari pengambilan <i>string</i> sembarang di L lalu digabungkan dengan <i>string</i> sembarang di M. 
+                  Kita menotasikan <i>concatenation</i> dengan <i>dot</i> (.) atau tanpa operator apapun juga. Meskipun begitu, 
+                  operator <i>concatenation</i> sering disebut “<i>dot</i>”.
+                <li style="font-weight: bold;"><i>The closure</i> (<i>Keene closure</i>) </li> 
+                <i>The closure</i> (<i>Keene closure</i>) dari bahasa L yang dinotasikan dengan L* dan menampilkan 
+                  set dari beberapa <i>string</i> yang bisa disusun berdasarkan pengambilan angka apapaun dari <i>string</i> 
+                  L, mungkin dengan perulangan lalu semuanya digabungkan.
+              </ol>
+            </p>
+
+              <br>
+          <hr color="purple" size="50" noshade align="center" width="1200px">
+          <br>
+         
+          <p class="text-uppercase text-center title-text">
+            <b>MANFAAT DAN CONTOH PEMANFAATAN REGEX</b>
+          </p>
+          
+          <p style="text-align:justify;">
+            Berdasarkan definisi <i>regular expressions</i> sendiri, kita dapat mengetahui tiga manfaat penting dari
+            <i>regular expressions</i>, yaitu pencarian, pencocokan, dan manipulasi teks (<i>string</i>). 
+            Berikut ini beberapa contoh pemanfaatan <i>regular expressions</i> dalam pemrograman:
+            <ol style="text-align: justify;">
+              <li style="font-weight: bold;"><i>Regular Expressions</i> Untuk Validasi Data</li>
+              Pemanfaatan <i>regular expressions</i> satu ini sama halnya dengan contoh kasus seperti membuat <i>password</i>, 
+              dimana kita diminta harus menggunakan huruf kapital, angka, dan simbol, jika tidak mematuhinya, 
+              maka akan diberikan peringatan seperti di bawah ini: <br><br>
+              <img src="img/re1.JPG" width="60%" height="60%" style="display: block; margin: auto;" ><br>
+              Pengetahuan program mengenai ketidakpatuhan kita inilah yang merupakan peran regular expressions, program mampu 
+              mengenali password yang kita inputkan pada filled berkat regular expressions. Itulah salah satu pemanfaatan 
+              regular expressions sebagai matching atau pencocok teks. 
+              <br>
+              Pertama-tama, kita harus mendefinisikan pola regex untuk data yang valid. Kemudian, kita lakukan pencocokan dengan 
+              pola tersebut. Contohnya akan saya perlihatkan menggunakan kode HTML berikut ini: <br><br>
+              <img src="img/re2.JPG" width="60%" height="60%" style="display: block; margin: auto;"> <br>
+              Perhatikan atribut pattern, atribut ini digunakan untuk menyimpan pola regular expressions. Pada contoh di atas, 
+              polanya adalah pengecekan karakter yang diinputkan pada password.<br><br>
+
+              <li style="font-weight: bold;"><i>Regular Expressions</i> untuk Pencarian</li>
+              Contoh penerapan regular expressions untuk pencarian sebenarnya hampir sama dengan validasi data. Pola 
+              regular expressions dimasukkan dalam kata kunci, lalu dicocokkan dengan database atau teks. Contoh program 
+              yang menerapkan ini ialah grep (globally search for a regular expression and print matching lines) yang 
+              dimana biasanya ditemukan di sistem operasi Unix dan Linux, bahkan ini menjadi program yang selalu ada di 
+              setiap distro Linux. Program grep melalukan pencarian berdasarkan pola regular expression yang diberikan, 
+              lalu mencetak output hasilnya. 
+              <br><br>
+              Contohnya, semisal kita ingin mencari teks pada syslog, kita bisa melihat ini file syslog dengan cat
+              <br><br>
+              <img src="img/re3.JPG" width="60%" height="60%" style="display: block; margin: auto;"> <br>
+              Perintah ini akan menampilkan banyak sekali teks. Nah di sini kita bisa memanfaatkan grep untuk mencari teks tertentu 
+              pada log. Jika semisal kita ingin tahu apa saja log yang berkaitna dengan jaringan: <br><br>
+              <img src="img/re4.JPG" width="60%" height="60%" style="display: block; margin: auto;"> <br>
+              Jika diperhatikan, terdapat kata network yang dimana menjadi pola regular expression dan akan menjadi kata kunci 
+              pencarian, lalu hasilnya pun seperti di bawah ini: <br><br>
+              <img src="img/re5.png" width="60%" height="60%" style="display: block; margin: auto;"> <br>
+              Grep akan mewarnai hasil teks yang cocok dengan pola regular expression yang diberikan. Hasil tersebut juga dapat 
+              memberikan kita clue mengenai log apa saja yang sudah dilakukan pada jaringan komputer kita. Perlu diketahui juga 
+              bahwa tidak hanya di grep saja, melainkan pada beberapa teks editor juga menerapkan regular expression untuk 
+              pencarian.
+
+              <br><br>  
+              <li style="font-weight: bold;"><i>Regular Expression</i> untuk Find and Replace</li>
+              Manfaat yang satu ini sangat memberikan kemudahan bagi penggunanya, bagaimana tidak, sebab fitur ini membantu mengelola 
+              teks dan konten dengan lebih efisien. Jika dimisalkan kita memiliki ratusan konten dengan format markdown, lalu di 
+              satu kondisi kita ingin mengubah beberapa teks di semua konten, tentu kita akan kewalahan dan menguras banyak waktu 
+              dan tenaga sebab harus dilakukan satu-per-satu, tapi karena regular expression, kita bisa lakukan dalam hitungan 
+              detik. Cukup dengan membuat pola pencarian dan pola untuk mengubahnya (substitusi).<br><br>
+              Sebagai contoh, jika kita ingin mengubah code di bawah ini:  
+              <br><br>
+              <img src="img/re6.JPG" width="60%" height="60%" style="display: block; margin: auto;"> <br>
+              Sehingga menjadi:  
+              <br><br>
+              <img src="img/re7.JPG" width="60%" height="60%" style="display: block; margin: auto;"> <br>
+              Maka pola pencariannya yaitu:  
+              <br><br>
+              <img src="img/re8.JPG" width="60%" height="60%" style="display: block; margin: auto;"> <br>
+              Dan pola untuk mengubahnya yaitu:  
+              <br><br>
+              <img src="img/re9.JPG" width="60%" height="60%" style="display: block; margin: auto;"> <br>
+              Maka diperoleh hasil seperti berikut:  
+              <br><br>
+              <img src="img/re10.png" width="60%" height="60%" style="display: block; margin: auto;"> <br>
+              Pada pola pencarian di atas, kita melakukan pengelompokkan atau grouping sebanyak lima kelompok. 
+              Lalu melakukan substitusi atau replace. Gambarannya sebagai berikut: 
+              <br><br>
+              <img src="img/re11.png" width="60%" height="60%" style="display: block; margin: auto;"> <br>
+            </ol>
+                
+        </div>
+      
+        <br>
+          <hr color="purple" size="100" noshade align="center" width="1200px">
+
+          <br>
+      <h3 class="text-uppercase text-center title-text">
+        <b>Referensi</b>
+      </h3>
+      <br>
+      <p class="text-center" style="text-align:justify;">
+        <a href="https://www.codepolitan.com/mengenal-regular-expressions-5a15003d9410a">Code Politan: Mengenal Regular Expression</a>
+      </p>
+      <p class="text-center" style="text-align:justify;">
+        <a href="https://jagongoding.com/web/php/menengah/regular-expression/">Jago Ngoding: Belajar Regular Expression</a>
+      </p>
+      <p class="text-center" style="text-align:justify;">
+        <a href="https://www.petanikode.com/regex/">Petani Kode: Apa itu Regex? dan Apa Manfaatnya dalam Pemrograman?</a>
+      </p>
+      <p class="text-center" style="text-align:justify;">
+        <a href="https://sikola.unhas.ac.id/">TBO: Alur Pembelajaran Pertemuan 05 in SIKOLA Unhas</a>
+      </p>
+      
+     
+     </div>
+      </section>
+
+      <br><br><br>
+      <hr color="purple" size="50" noshade align="center" width="90px">
+
+    
+    <footer class="footer-area">
+      <div class="container">
+        <div class="logo-footer">
+          <div class="site-logo text-center py-4">
+            <a><img src="img/Logo.svg" alt="logo-footer"/></a>
+          </div>
+          <div class="social text-center">
+            <h5 class="text-uppercase"><b>Follow Me</b></h5>
+            <a href="https://www.facebook.com/Sri.Fatra" target="_blank"
+              ><i class="fab fa-facebook social-media"></i
+            ></a>
+            <a href="https://www.instagram.com/ayu.fatra/" target="_blank"
+              ><i class="fab fa-instagram social-media"></i
+            ></a>
+            <a href="https://twitter.com/Sri_Fatra" target="_blank"
+              ><i class="fab fa-twitter social-media"></i
+            ></a>
+          </div>
+          <div class="copyrights text-center">
+            <p class="para">
+              <B>© SRI RAHAYU INDAL FATRA, 2020</B>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Start Back-Top -->
+      <div id="back-top">
+        <a title="Go Up" href="#">
+          <i class="fas fa-arrow-up"></i>
+        </a>
+      </div>
+      <!-- End Back-Top -->
+    </footer>
+
+    <!-- jQuery JS file -->
+    <script src="js/jquery.3.4.1.js"></script>
+
+    <!-- Bootstrap JS file -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Isotope JS library -->
+    <script src="vendor/isotope/isotope.min.js"></script>
+
+    <!-- Magnific Popup Script file -->
+    <script src="js/jquery.magnific-popup.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    
+    <!-- Magnific Popup Script file -->
+    <script src="vendor/Magnific-Popup/dist/jquery.magnific-popup.min.js"></script>
+
+    <!-- Owl-carousel JS file -->
+    <script src="vendor/owl-carousel/js/owl.carousel.min.js"></script>
+
+    <!-- ScrollReveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- Aos Animate -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+      AOS.init();
+    </script>
+
+    <!-- Custom JS file -->
+    <script src="js/main.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
