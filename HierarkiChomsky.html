@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- Icon Web -->
+    <link rel="icon" href="img/favicon.png" />
+    <title>Hierarki Chomsky - AyuFatra</title>
+
+    <!-- Bootstrap CSS file -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- Font Awesome Icons CSS file -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- Custom CSS file -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Responsive CSS file -->
+    <link rel="stylesheet" href="css/responsive.css" />
+    <!-- Aos Animate -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Start Preloader Area -->
+    <div class="preloader-area">
+      <div class="ring-loader">
+        Loading
+        <span class="span-ring"></span>
+      </div>
+    </div>
+    <!-- End Preloader Area -->
+
+    <!-- Start Header Area -->
+    <header class="header_area">
+      <div class="main-menu">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <a class="navbar-brand" href="profile-card.html"
+            ><img src="img/Logo.svg" alt="logo"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="mr-auto"></div>
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  TEORI BAHASA DAN OTOMATA
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="PengantarTBO.html">Pengantar TBO</a>
+                  <a class="dropdown-item " href="NotasiBig-O.html">Notasi Big-O</a>
+                  <a class="dropdown-item " href="DFA-NFA.html">Pemanfaatan DFA/NFA</a>
+                  <a class="dropdown-item " href="Regex.html">Pemanfaatan RegEx</a>
+                  <a class="dropdown-item " href="CFG.html">Pemanfaatan CFG</a>
+                  <a class="dropdown-item " href="HierarkiChomsky.html">Hierarki Chomsky</a>
+                  <a class="dropdown-item " href="MesinTuring.html">Mesin Turing</a>
+                </div>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- End Header Area -->
+
+     <!-- Start Main Area -->
+     <main class="site-main">
+       <br>
+      <div class="container" data-aos="zoom-in" data-aos-duration="3000" align="center">
+        <img src="img/chomsky.JPG" width="100%" height="80%" style="display: block; margin: auto;"><br>
+    </div>
+      <br>
+      <hr color="purple" size="50" noshade align="center" width="900px"><br>
+      <div class="container mb-5" data-aos="zoom-in" data-aos-duration="1000">
+        <img src="img/panah.png" width="5%" height="5%" style="display: block; margin: auto;"> </div>
+      <!-- my Tasks -->
+      
+      <section class="nomor1">
+        <div class="container">
+         
+          <p class=" text-center title-text">
+            <b>Sejarah dan Pengertian <i>Hierarki Chomsky</i></b>
+          </p>
+          <img src="img/hc.webp" width="60%" height="60%" style="display: block; margin: auto;"> <br>
+
+            <p style="text-align:justify;">
+              Bahasa apa pun adalah media komunikasi terstruktur baik itu bahasa lisan atau tulisan, bahasa isyarat 
+              atau kode, atau bahasa pemrograman formal. Bahasa dicirikan oleh dua elemen dasar - sintaks (aturan 
+              tata bahasa) dan semantik (makna). Dalam beberapa bahasa, artinya mungkin berbeda-beda bergantung pada 
+              faktor ketiga yang disebut konteks penggunaan. Bergantung pada batasan dan kompleksitas yang ada dalam 
+              tata bahasa, bahasa mendapat tempat dalam hierarki bahasa formal. <br><br> <i>Noam Chomsky</i>, ahli bahasa Amerika 
+              sekaligus ilmuwan kognitif ternama, mendefinisikan <i>hierarki</i> ini pada tahun 1956 dan karenanya disebut 
+              <i>Chomsky Hierarchy</i>. Dalam teori bahasa formal, ilmu komputer, dan linguistik, <i>hierarki Chomsky</i> (terkadang 
+              disebut sebagai <i>hierarki Chomsky-Schützenberger</i>) adalah hierarki penahanan kelas-kelas tata bahasa formal.
+              <br><br> <i>Hierarki Chomsky</i> merupakan tata Bahasa (grammar) yang bisa didefinisikan secara formal sebagai sebuah kumpulan 
+              dari himpunan-himpunan variabel, simbol-simbol terminal, simbol awal, yang dibatasi oleh aturan-aturan produksi. 
+            <br><br>
+          <hr color="purple" size="50" noshade align="center" width="900px">
+          <br>
+
+          <p class="text-center title-text">
+            <b>Istilah dalam <i>Hierarki Chomsky</i></b>
+          </p>
+          <ul style="text-align: justify;">
+            <li><b>Simbol</b> - Huruf, angka, karakter tunggal. Contoh - A, b, 3</li>
+            <li><b>String</b> - Urutan simbol hingga. Contoh - Abcd, x12</li>
+            <li><b>Aturan Produksi</b> - Kumpulan aturan untuk setiap tata bahasa yang menjelaskan cara membentuk string dari bahasa yang valid secara sintaksis.</li>
+            <li><b>Terminal</b> - Unit tata bahasa terkecil yang muncul dalam aturan produksi, tidak dapat dirinci lebih lanjut.</li>
+            <li><b>Non-Terminal</b> - Simbol yang dapat diganti dengan non-terminal atau terminal lain dengan penerapan aturan produksi yang berurutan.</li>
+            <li><b>Grammar</b> - Aturan untuk membentuk kalimat yang terstruktur dengan baik dan kata-kata yang membentuk kalimat tersebut dalam suatu bahasa. A 4-tupel G = (V, T, P, S) sedemikian rupa sehingga V = Himpunan tak-kosong terbatas dari simbol-simbol non-terminal, T = Himpunan hingga simbol terminal, P = Himpunan aturan produksi tak-kosong hingga, S = Simbol mulai</li>
+            <li><b>Bahasa</b> - Kumpulan string yang sesuai dengan tata bahasa. Bahasa pemrograman memiliki string terbatas, sebagian besar bahasa alami tampaknya tidak terbatas. Contoh - Spanyol, Python, kode Heksadesimal.</li>
+            <li><b>Automaton</b> - Versi tata bahasa yang dapat diprogram dan diatur oleh aturan produksi yang telah ditentukan sebelumnya. Ini telah menetapkan persyaratan komputasi memori dan pemrosesan dengan jelas. Contoh - Otomat biasa untuk ekspresi reguler.</li>
+          </ul>
+
+          <br><br>
+          <hr color="purple" size="50" noshade align="center" width="900px">
+          <br>
+
+          <p class="text-center title-text">
+            <b>Kategori dalam <i>Hierarki Chomsky</i></b>
+          </p>
+          <i>Hierarki Chomsky</i> mewakili kelas bahasa yang diterima oleh mesin yang berbeda. Kategori bahasa dalam <i>Hierarki Chomsky</i> dapat dibedakan
+          menjadi beberapa macam, yaitu sebagai berikut: <br>
+          <img src="img/hm1.JPG" width="40%" height="70%" style="display: block; margin: auto;"> <br>
+          
+          <strong style="color:rebeccapurple"><h5>Type 0: dikenal sebagai <i>Unrestricted Grammar</i></h5></strong>
+          <p style="text-align:justify;"> 
+            Type 0 Grammar dikenal sebagai Unrestricted Grammar. Tidak ada batasan pada aturan tata bahasa untuk 
+            jenis bahasa ini. Bahasa-bahasa ini dapat dimodelkan secara efisien oleh mesin Turing.
+            <br>
+            <b>Contoh:</b>
+            <p style="text-align:justify; white-space:pre; line-height: 3px;">
+              bAa → aa   <br><br><br><br><br><br><br><br>
+              S → s <br>
+          </p>
+              
+          <br>
+          <strong style="color:rebeccapurple"><h5>Type 1: dikenal sebagai <i>Context Sensitive Grammar</i></h5></strong>
+          <p style="text-align:justify;"> 
+            Type 1 Grammar dikenal sebagai Context Sensitive Grammar. Context Sensitive Grammar digunakan untuk mewakili 
+            Context Sensitive Language. Context Sensitive Grammar mengikuti aturan berikut:
+            <ul style="text-align: justify;">
+              <li>Context Sensitive Grammar mungkin memiliki lebih dari satu simbol di sisi kiri aturan produksinya.</li>
+              <li>Jumlah simbol di sisi kiri tidak boleh melebihi jumlah simbol di sisi kanan.</li>
+              <li>Aturan dalam bentuk A → ε tidak diperbolehkan kecuali A adalah simbol awal. Itu tidak terjadi di sisi kanan aturan mana pun</li>
+              <li>Type 1 grammar harus Tipe 0. Dalam type 1, Produksi dalam bentuk V → T</li>
+            </ul>
+            Dan perlu diketahui bahwa jumlah simbol di V kurang dari atau sama dengan T. <br>
+            <b>Contoh:</b>
+            <p style="text-align:justify; white-space:pre; line-height: 3px;">
+              S → AT  <br><br><br><br><br><br><br><br>
+              T → xy  <br><br><br><br><br><br><br><br>
+              A → a    <br>
+          </p>
+
+          <br>
+          <strong style="color:rebeccapurple"><h5>Type 2: dikenal sebagai <i>Context Free Grammar</i></h5></strong>
+          <p style="text-align:justify;"> 
+            Type 2 Grammar dikenal sebagai Context Free Grammar. Context Free Languages adalah bahasa yang dapat 
+            direpresentasikan oleh Context Free Grammars (CFG). Tipe 2 harus tipe 1. Aturan produksi adalah dalam 
+            bentuk A → α, dimana A adalah satu non-terminal dan merupakan kombinasi dari terminal dan non-terminal.
+            <br>
+            <b>Contoh:</b>
+            <p style="text-align:justify; white-space:pre; line-height: 3px;">
+              A → aBb    <br><br><br><br><br><br><br><br>
+              A → b   <br><br><br><br><br><br><br><br>
+              B → a       <br>
+          </p>
+
+          <br>
+          <strong style="color:rebeccapurple"><h5>Type 3: dikenal sebagai <i>Regular Grammar</i></h5></strong>
+          <p style="text-align:justify;"> 
+            Type 3 Grammar dikenal sebagai Regular Grammar. Bahasa reguler adalah bahasa yang dapat 
+            dideskripsikan menggunakan ekspresi reguler. Bahasa-bahasa ini dapat dimodelkan oleh NFA atau DFA.
+            Type 3 adalah bentuk tata bahasa yang paling terbatas. Tata bahasa Type 3 harus Type 2 dan Type 1. Dan adapun Type 3 
+            harus dalam bentuk V → T*V / T*.
+            <br>
+            <b>Contoh:</b>
+            <p style="text-align:justify; white-space:pre; line-height: 3px;">
+              A → xy <br>
+          </p>
+          
+          <br>
+          <hr color="purple" size="50" noshade align="center" width="900px">
+          
+          <br>
+          <p class="text-center title-text">
+            <b>Ektensi Penting untuk <i>Hierarki Chomsky</i></b>
+          </p>
+          <img src="img/hm2.webp" width="30%" height="30%" style="display: block; margin: auto;"> <br>
+          Ada dua perluasan pada hierarki Chomsky tradisional yang telah terbukti berguna dalam linguistik dan ilmu kognitif:
+          <ul style="text-align: justify;">
+            <li><b>Mildly context-sensitive languages</b> <br> 
+              CFG tidak memadai (lemah atau kuat) untuk mencirikan beberapa aspek struktur bahasa. Untuk mendapatkan 
+              kekuatan ekstra di luar CFG, formalisme gramatikal yang disebut Tree Adjoining Grammars (TAG) diusulkan 
+              sebagai karakterisasi perkiraan Mildly Context-Sensitive Grammars. Ini adalah sistem penghasil pohon yang 
+              memfaktorkan rekursi dan domain dependensi dengan cara baru yang mengarah ke 'lokalisasi' dependensi, 
+              perilaku jarak jauhnya setelah pengoperasian komposisi, yang disebut 'adjoining'. Klasifikasi lain yang 
+              disebut Minimalist Grammars (MG) menggambarkan kelas bahasa formal yang lebih besar.</li>
+            <li><b>Bahasa sub-reguler</b> <br> Bahasa sub-reguler adalah sekumpulan string yang dapat dijelaskan tanpa 
+              menggunakan kekuatan penuh automata keadaan terbatas. Banyak aspek bahasa manusia yang secara nyata 
+              sub-reguler, seperti beberapa ketergantungan 'strictly local'. Contoh - mengidentifikasi pola sub-string 
+              berulang dalam kata-kata adalah salah satu aplikasi yang umum.</li>
+          </ul>
+          
+          <br>
+          <hr color="purple" size="50" noshade align="center" width="900px">
+          
+          <br>
+          <p class="text-center title-text">
+            <b>Jenis Automaton setiap Level <i>Hierarki Chomsky</i></b>
+          </p>
+          Adapun jenis automaton yang mampu mengenali tata bahasa di setiap level yaitu sebagai berikut:
+          <ul style="text-align: justify;">
+            <li><b>Type-3: Finite-State Automata</b> <br> Untuk menghitung konstruksi untuk bahasa biasa, pertimbangan 
+              terpenting adalah tidak adanya kebutuhan memori. Pikirkan mesin penjual otomatis untuk tiket platform atau 
+              algoritme lift. Otomaton mengetahui keadaan saat ini dan keadaan selanjutnya yang diizinkan, tetapi tidak 
+              'mengingat' langkah-langkah sebelumnya.</li>
+            <li><b>Type-2: Push-Down Automata</b> <br> Untuk mencocokkan dependensi bersarang, robot ini membutuhkan 
+              tumpukan memori satu ujung. Misalnya, untuk mencocokkan jumlah frasa 'jika' dan 'lain', robot perlu 'mengingat'
+               yang terakhir terjadi 'jika'. Hanya dengan begitu ia dapat menemukan 'lain' yang sesuai.</li>
+            <li><b>Type-1: Linear-Bounded Automata</b> <br> Adalah bentuk mesin Turing terbatas yang bukannya tidak 
+              terbatas, melainkan dibatasi oleh beberapa fungsi linier yang dapat dihitung. Keuntungan dari robot ini 
+              adalah bahwa kebutuhan memorinya (batas atas RAM) dapat diprediksi bahkan jika eksekusinya bersifat 
+              rekursif di beberapa bagian.</li>
+            <li><b>Tipe-0: Mesin Turing</b> <br> Fungsi yang tidak dapat dihitung ada dalam Matematika dan Ilmu Komputer. 
+              Namun, mesin Turing memungkinkan merepresentasikan fungsi seperti itu sebagai urutan langkah-langkah terpisah. 
+              Kontrol itu terbatas meskipun data mungkin tampak tidak terbatas. </li>
+          </ul>
+        </div>
+
+      
+        <br>
+          <hr color="purple" size="50" noshade align="center" width="900px">
+
+          <br>
+      <h3 class="text-uppercase text-center title-text">
+        <b>Referensi</b>
+      </h3>
+      <br>
+      <p class="text-center" style="text-align:justify;">
+        <a href="https://devopedia.org/chomsky-hierarchy">DevopediaTM: Chomsky Hierarchy</a>
+      </p>
+      <p class="text-center" style="text-align:justify;">
+        <a href="https://people.cs.clemson.edu/~goddard/texts/theoryOfComputation/8a.pdf">Goddard: The Chomsky Hierarchy</a>
+      </p>
+      <p class="text-center" style="text-align:justify;">
+        <a href="https://www.inigema.com/2018/04/tata-bahasa-hirarki-chomsky-dan-teori.html">Inimega.com: Tata Bahasa, Hirarki Chomsky, dan Teori Himpunan</a>
+      </p>
+      <p class="text-center" style="text-align:justify;">
+        <a href="https://www.javatpoint.com/automata-chomsky-hierarchy">JavaTPoint: Chomsky Hierarchy</a>
+      </p>
+      
+      
+      
+      
+      
+     
+     </div>
+      </section>
+
+      <br><br><br>
+      <hr color="purple" size="50" noshade align="center" width="90px">
+
+    
+    <footer class="footer-area">
+      <div class="container">
+        <div class="logo-footer">
+          <div class="site-logo text-center py-4">
+            <a><img src="img/Logo.svg" alt="logo-footer"/></a>
+          </div>
+          <div class="social text-center">
+            <h5 class="text-uppercase"><b>Follow Me</b></h5>
+            <a href="https://www.facebook.com/Sri.Fatra" target="_blank"
+              ><i class="fab fa-facebook social-media"></i
+            ></a>
+            <a href="https://www.instagram.com/ayu.fatra/" target="_blank"
+              ><i class="fab fa-instagram social-media"></i
+            ></a>
+            <a href="https://twitter.com/Sri_Fatra" target="_blank"
+              ><i class="fab fa-twitter social-media"></i
+            ></a>
+          </div>
+          <div class="copyrights text-center">
+            <p class="para">
+              <B>© SRI RAHAYU INDAL FATRA, 2020</B>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Start Back-Top -->
+      <div id="back-top">
+        <a title="Go Up" href="#">
+          <i class="fas fa-arrow-up"></i>
+        </a>
+      </div>
+      <!-- End Back-Top -->
+    </footer>
+
+    <!-- jQuery JS file -->
+    <script src="js/jquery.3.4.1.js"></script>
+
+    <!-- Bootstrap JS file -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Isotope JS library -->
+    <script src="vendor/isotope/isotope.min.js"></script>
+
+    <!-- Magnific Popup Script file -->
+    <script src="js/jquery.magnific-popup.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    
+    <!-- Magnific Popup Script file -->
+    <script src="vendor/Magnific-Popup/dist/jquery.magnific-popup.min.js"></script>
+
+    <!-- Owl-carousel JS file -->
+    <script src="vendor/owl-carousel/js/owl.carousel.min.js"></script>
+
+    <!-- ScrollReveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- Aos Animate -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+      AOS.init();
+    </script>
+
+    <!-- Custom JS file -->
+    <script src="js/main.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

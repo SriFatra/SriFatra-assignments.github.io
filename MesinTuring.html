@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <!-- Icon Web -->
     <link rel="icon" href="img/favicon.png" />
-    <title>Context Free Grammar - AyuFatra</title>
+    <title>Mesin Turing - AyuFatra</title>
 
     <!-- Bootstrap CSS file -->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
@@ -95,98 +95,7 @@
             <b>CONTEXT FREE GRAMMAR</b>
           </p>
           <p style="text-align:justify;">
-            CFG (<i>Context Free Grammar</i>) adalah tata bahasa yang mempunyai tujuan sama seperti halnya tata bahasa regular yaitu merupakan suatu 
-            cara untuk menunjukkan bagaimana menghasilkan suatu untai-untai dalam sebuah bahasa. CFG atau 
-             adalah tata bahasa formal di mana setiap aturan produksi adalah 
-            dalam bentuk A → B di mana A adalah pemproduksi, dan B adalah hasil produksi. Batasannya hanyalah ruas 
-            kiri adalah sebuah simbol variabel. Dan pada ruas kanan bisa berupa terminal, symbol, variable ataupun ɛ, 
-            Contoh aturan produksi yang termasuk CFG adalah seperti berikut ini:
-            <ul style="text-align: justify;">
-              <li>X → bY | Za</li>
-              <li>Y → aY | b</li>
-              <li>Z → bZ | ɛ</li>
-            </ul>
-          <p style="text-align:justify;">
-            CFG perlu disederhankan dengan tujuan untuk melakukan pembatasan sehingga tidak menghasilkan pohon penurunan 
-            yang memiliki kerumitan yang tak perlu atau aturan produksi tak berarti. Berikut merupakan langkah-langkah 
-            dalam melakukan penyederhanaan CFG: <br>
-            <ul style="text-align: justify;">
-              <li>Eliminasi ɛ-production</li>
-              <li>Eliminasi unit production</li>
-              <li>Eliminasi useless symbol</li>
-            </ul>
-
-          <p style="text-align:justify;">
-            <i>Context Free Grammars</i> dipelajari di bidang ilmu komputer teoretis, desain penyusun, dan linguistik. 
-            CFG digunakan untuk mendeskripsikan bahasa pemrograman dan program pengurai dalam kompiler dapat 
-            dihasilkan secara otomatis dari tata bahasa bebas konteks. CFG dapat dijelaskan dengan tupel empat 
-            elemen (V,Σ,R,S), dimana <br>
-            <ul style="text-align: justify;">
-              <li>V adalah sekumpulan variabel terbatas (yang non-terminal)</li>
-              <li>Σ adalah himpunan terbatas (disjoint dari V) simbol terminal</li>
-              <li>R adalah sekumpulan aturan produksi di mana setiap aturan produksi memetakan variabel ke string s ∈ (V ∪ Σ)∗</li>
-              <li>S yang merupakan simbol awal.</li>
-            </ul>
-            <br>
-          <hr color="purple" size="100" noshade align="center" width="1200px">
-            
-            <p class="text-uppercase text-center title-text">
-              <b>KEMAMPUAN CFG</b>
-            </p>
-            <p style="text-align:justify;">
-              Kemampuan dari <i>Context Free Grammar</i> terdiri dari beberapa bagian, yaitu:
-              <ul style="text-align: justify;">
-                <li>Tata bahasa bebas konteks berguna untuk mendeskripsikan sebagian besar bahasa pemrograman.</li>
-                <li>Jika tata bahasa dirancang dengan benar maka pengurai yang efisien dapat dibangun secara otomatis.</li>
-                <li>Dengan menggunakan fitur informasi asosiatif & prioritas, tata bahasa yang sesuai untuk ekspresi dapat dibangun.</li>
-                <li>Tata bahasa bebas konteks mampu mendeskripsikan struktur bertingkat seperti: tanda kurung seimbang, pencocokan awal-akhir, sesuai jika-maka-lain & seterusnya.</li>
-              </ul>
-
-            <br>
-            <hr color="purple" size="100" noshade align="center" width="1200px">
-                
-            <p class="text-uppercase text-center title-text">
-              <b>APLIKASI PEMANFAATAN CFG</b>
-            </p>
-            <p>
-              <strong style="color:rebeccapurple"><h5>Parser</h5></strong>
-             </p>
-              <p style="text-align:justify;">
-                <i>Context Free Grammars</i> digunakan untuk mendeskripsikan bahasa pemrograman. Yang terpenting, ada cara 
-                mekanis untuk mengubah deskripsi sebagai CFG menjadi parser, komponen penyusun yang menemukan struktur 
-                program sumber dan merepresentasikan struktur itu sebagai pohon. 
-                <p style="text-align:justify;">
-               <b>Sebagai contoh:</b> 
-                <br style="text-align: justify;">
-                Fitur <i>Document Type Defnition </i> (DTD) dari <i>Extensible Markup Language</i>(XML) pada dasarnya 
-                adalah CFG yang menjelaskan tag HTML yang diizinkan dan cara tag ini dapat disarangkan. Misalnya, 
-                ada banyak aspek bahasa pemrograman tipikal yang bisa dimiliki seperti tanda kurung seimbang. 
-                Awal dan akhir blok kode, seperti awal dan akhir Pascal, atau tanda kurung kurawal {...} dari C, 
-                adalah contoh. Ada pola terkait yang kadang-kadang muncul, di mana "tanda kurung" bisa diseimbangkan 
-                dengan pengecualian bahwa mungkin ada tanda kurung kiri yang tidak seimbang. Contohnya adalah perlakuan 
-                if dan else di C. Klausa if dapat tampak tidak seimbang dengan klausa else, atau mungkin diimbangi 
-                dengan klausa else yang cocok. Tata bahasa yang menghasilkan kemungkinan urutan if dan else 
-                (masing-masing diwakili oleh i dan e) adalah: <br>
-                <b><i>S -> SS -> iS -> iSe -> λ</i></b> 
-                <p style="text-align:justify;">
-                Misalnya, ieie, iie, dan iei adalah kemungkinan urutan if dan else dan masing-masing string ini 
-                dihasilkan oleh grammer di atas. Beberapa contoh urutan ilegal yang tidak dibuat oleh grammer adalah, ei, 
-                ieeii, iee.
-
-              <br><br>
-              <p>
-                <strong style="color:rebeccapurple"><h5>XML & Document - Type Definition</h5></strong>
-               </p>
-                <p style="text-align:justify;">
-                  Fakta bahwa HTML dideskripsikan dengan tata bahasa tidaklah luar biasa. pada dasarnya semua bahasa 
-                  pemrograman dapat dideskripsikan oleh CFG-nya sendiri, jadi akan lebih mengejutkan jika kita tidak bisa 
-                  mendeskripsikan HTML. namun, ketika kami melihat bahasa markup yang penting, XML (eXtensible Markup Language), 
-                  kami menemukan bahwa CFG memainkan peran yang lebih penting, sebagai bagian dari proses yang menggunakan bahasa 
-                  tersebut. tujuan XML bukan untuk mendeskripsikan format dokumen; itulah pekerjaan untuk HTML. sebaliknya, XML 
-                  mencoba mendeskripsikan "semantik" teks. misalnya, teks seperti "12 Maple St." tampak seperti sebuah alamat, 
-                  tetapi apakah? dalam XML, tag akan mengelilingi frase yang mewakili sebuah alamat; Gambarannya sebagai
-                  berikut: <br><br>
-                  <img src="img/cfg1.png" width="25%" height="25%" style="display: block; margin: auto;"> <br>
+            CFG 
         </div>
       
         <br>
