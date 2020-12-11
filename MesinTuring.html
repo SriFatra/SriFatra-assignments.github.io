@@ -80,7 +80,7 @@
      <main class="site-main">
        <br>
       <div class="container" data-aos="zoom-in" data-aos-duration="3000" align="center">
-        <img src="img/CPG.JPG" width="100%" height="80%" style="display: block; margin: auto;"><br>
+        <img src="img/mestur.JPG" width="100%" height="80%" style="display: block; margin: auto;"><br>
     </div>
       <br>
       <hr color="purple" size="50" noshade align="center" width="900px"><br>
@@ -90,15 +90,218 @@
       
       <section class="nomor1">
         <div class="container">
-         
-          <p class="text-uppercase text-center title-text">
-            <b>CONTEXT FREE GRAMMAR</b>
+          <p class=" text-center title-text">
+            <b>Sejarah dan Pengertian Mesin Turing</b>
+          </p>
+            <p style="text-align:justify;">
+              Mesin Turing ditemukan pada tahun 1936 oleh Alan Turing, yang menyebutnya sebagai "mesin" (mesin otomatis). 
+              Dengan model ini, Turing mampu menjawab dua pertanyaan negatif yaitu Apakah ada mesin yang dapat menentukan 
+              apakah mesin sembarang pada pita itu "melingkar" (misalnya, membeku, atau gagal melanjutkan komputasi tugas)? 
+              dan apakah ada mesin yang dapat menentukan apakah ada mesin sewenang-wenang pada kasetnya yang 
+              pernah mencetak simbol tertentu? Jadi dengan memberikan deskripsi matematis dari perangkat yang sangat sederhana 
+              yang mampu melakukan perhitungan sewenang-wenang, ia mampu membuktikan sifat komputasi secara umum – dan 
+              khususnya, <i>ketidaktercomputasian  Entscheidungsproblem</i> ('masalah keputusan').  Mesin turing membuktikan adanya 
+              batasan fundamental pada kekuatan komputasi mekanis. Meskipun mereka dapat mengekspresikan penghitungan 
+              sewenang-wenang, desain minimalis membuatnya tidak cocok untuk komputasi dalam praktiknya: komputer 
+              dunia nyata didasarkan pada desain berbeda yang, tidak seperti mesin Turing, menggunakan memori akses acak.
+              <br><br>
+              Mesin Turing adalah model komputasi teoritis yang ditemukan oleh Alan Turing, berfungsi sebagai model ideal 
+              untuk melakukan perhitungan matematis. Walaupun model ideal ini diperkenalkan sebelum komputer nyata dibangun, 
+              model ini tetap diterima kalangan ilmu komputer sebagai model komputer yang sesuai untuk menentukan apakah suatu 
+              fungsi dapat selesaikan oleh komputer atau tidak (menentukan computable function). Mesin Turing terkenal dengan 
+              ungkapan ”<i>Apapun yang bisa dilakukan oleh Mesin Turing pasti bisa dilakukan oleh komputer.</i>” Mesin Turing sendiri
+               merupakan model yang sangat sederhana dari komputer. Secara esensial, mesin Turing adalah sebuah finite automaton 
+               yang miliki sebuah tape tunggal dengan panjang tak terhingga yang dapat membaca dan menulis data.
+            <br><br>
+          <hr color="purple" size="50" noshade align="center" width="900px">
+          <br>
+
+          <p class=" text-center title-text">
+            <b>Model Mesin Turing</b>
+          </p>
+          <p style="text-align: justify;">
+            Mesin Turing memiliki tiga bagian utama, yaitu sebagai berikut:
+            <ul style="text-align: justify;">
+                <li>Bintang pertunjukan adalah gulungan <b>tape</b> yang tak terbatas yang dibagi ke dalam kotak-kotak atau sel-sel. 
+                  Tape ini dapat digunakan untuk menulis, dan simbol tertulis dapat dihapus atau ditulis ulang dengan yang 
+                  berbeda.</li>
+                <li>Hal yang melakukan penulisan adalah <b>head</b>. Kepala dapat bergerak ke atas dan ke bawah pita dan menulis, 
+                  menghapus atau menulis ulang simbol pada tape. Seperti head di hard disk.</li>
+                <li>Ada juga <b>state register (FSC)</b>, yang merupakan memori mesin. Ini memegang status mesin saat ini. Otak 
+                  dari TM, diimplementasikan dari algoritma pengenalan kalimat.</li>
+            </ul>
+            <p style="text-align: justify;">
+              Pada keadaan awal, n sel pertama dari pita masukan berisi rangkaian simbol yang harus dikenali 
+          (dinyatakan sebagai a1, a2, …, an). Sel di sebelah kanan rangkaian simbol berisi B. <br><br>
+          <img src="img/tur1.png" width="50%" height="50%" style="display: block; margin: auto;"> <br>
+            <br>
+
+          <hr color="purple" size="50" noshade align="center" width="900px">
+          <br>
+
+          <p class=" text-center title-text">
+            <b>Prinsip Kerja Mesin Turing</b>
           </p>
           <p style="text-align:justify;">
-            CFG 
-        </div>
+            Pada awalnya, input yang merupakan string dari simbol dengan panjang berhingga dipilih dari input alphabet, 
+            ditempatkan pada tape. Sel-sel tape yang lain, perluasan secara infinite ke kiri dan ke kanan, pada awalnya 
+            menampung simbol khusus yang dinamakan blank. Blank bukan sebuah input symbol, dan mungkin terdapat simbol 
+            tape yang lain disamping input symbol dan blank. <br><br>
+            Terdapat sebuah tape head yang selalu ditempatkan pada salah satu dari sel-sel tape. Mesin turing dikatakan 
+            men-scan sel tersebut. Pada awalnya, tape head berada pada sel paling kiri yang menampung input. Sebuah 
+            pergerakan mesin Turing adalah sebuah fungsi dari state dari finite control dan tape symbol yang di-scan.
+            <br><br>
+            Dalam satu pergerakan, mesin Turing akan:
+            <ul style="text-align: justify;">
+              <li>Merubah state. Next state dapat sama dengan current state.</li>
+              <li>Menulis sebuah tape symbol dalam sel yang di-scan. Tape symbol ini mengganti symbol apapun yang ada 
+                dalam sel tersebut. Secara opsional, simbol yang dituliskan dapat sama dengan simbol yang sekarang ada 
+                dalam tape.</li>
+              <li>Memindahkan tape head ke kiri atau ke kanan.</li>
+            </ul>
+          </p>
+          <br>
+
+          <hr color="purple" size="50" noshade align="center" width="900px">
+          <br>
+  
+          <p class=" text-center title-text">
+            <b>Spesifikasi Mesin Turing</b>
+          </p>
+            <p style="text-align:justify;">
+            Adapun spesifikasi dari Mesin Turing yaitu sebagai berikut:
+            <ul style="text-align: justify;">
+              <li>Mesin Turing memiliki pita berupa array sebagai memori yang dapat menyimpan sebuah simbol tunggal.</li>
+              <li>Mesin Turing juga memiliki Head fungsinya Sebagai Penunjuk Posisi yang diakses oleh Pita.</li>
+              <li>Head pada Mesin Turing juga dapat bergerak ke-kanan dan ke-kiri pada pita  sesuai fungsi transisi yang ditetapkan untuk membaca inputan.</li>
+              <li>Head juga Mampu melakukan tugas untuk menghapus dan mengubah isi dari Pita.</li>
+            </ul>
+            </p>
+            <br>
+
+          <hr color="purple" size="50" noshade align="center" width="900px">
+          <br>
+    
+          <p class=" text-center title-text">
+            <b>7 - Tuple Mesin Turing</b>
+          </p>
+            <p style="text-align:justify; font-size: 20px;">
+                <b>M = (Q, S, G, d, q<sub>0</sub>, B, F)</b>
+            </p>
+            <p style="text-align: justify;">
+              Komponen-komponennya adalah sebagai berikut:
+              <ol style="text-align: justify;">
+                <li> <b>Q</b> : Himpunan berhingga dari state dari finite control.</li>
+                <li> <b>S</b> : Himpunan berhingga dari simbol-simbol input.</li>
+                <li> <b>G</b> : Himpunan dari tape symbol. S merupakan subset dari G.</li>
+                <li> <b>d</b> : Fungsi transisi. Argumen d(q, X) adalah sebuah state q dan sebuah tape symbol X. 
+                  Nilai dari d(q, X), jika nilai tersebut didefinisikan, adalah triple (p, Y, D), dimana:
+                  <ul style="text-align: justify;">
+                  <li> p adalah next state dalam Q</li>
+                  <li> Y adalah simbol, dalam G, ditulis dalam sel yang sedang di-scan, menggantikan simbol apapun yang ada dalam sel tersebut.</li>
+                  <li> D adalah arah, berupa L atau R, berturut-turut menyatakan left atau right, dan menyatakan arah dimana head bergerak.</li>
+                  </ul>
+                </li>
+                <li> <b>q<sub>0</sub></b> : Start state, sebuah anggota dari Q, dimana pada saat awal finite control ditemukan.</li>
+                <li> <b>B</b> : Simbol blank. Simbol ini ada dalam G tapi tidak dalam S, yaitu B bukan sebuah simbol input.</li>
+                <li> <b>F</b> : Himpunan dari final state, subset dari Q.</li>
+              </ol>
+            </p>
+            <br>
+
+          <hr color="purple" size="50" noshade align="center" width="900px">
+          <br>
+    
+          <p class=" text-center title-text">
+            <b>Representasi Mesin Turing</b>
+          </p>
+          <p style="text-align: justify;">
+            Mesin Turing menggunakan notasi seperti ID-ID pada PDA untuk menyatakan konfigurasi dari komputasinya.
+            Dan adapun contoh gambar dari Representasi Mesin Turing yaitu sebagai berikut:  <br><br>
+          <img src="img/tur2.png" width="50%" height="50%" style="display: block; margin: auto;"> <br>
+            
+          <p style="text-align: justify;">
+            Mesin terdiri dari sebuah finite control, yang dapat berada dalam sebuah himpunan berhingga dari state. 
+            Terdapat sebuah tape yang dibagi ke dalam kotak-kotak atau sel-sel. Setiap sel dapat menampung sebuah dari 
+            sejumlah berhingga dari simbol. Pada awalnya, input yang merupakan string dari simbol dengan panjang 
+            berhingga dipilih dari input alphabet, ditempatkan pada tape. 
+            <br><br>Lebih jelasnya sebagai berikut:
+            <ul style="text-align: justify;">
+              <li>Sel-sel tape yang lain, perluasan secara infinite ke kiri dan ke kanan, pada awalnya menampung simbol 
+                khusus yang dinamakan blank.</li>
+              <li>Blank bukan sebuah input symbol, dan mungkin terdapat simbol tape yang lain disamping input symbol dan blank.</li>
+              <li>Terdapat sebuah tape head yang selalu ditempatkan pada salah satu dari sel-sel tape.</li>
+              <li>Mesin turing dikatakan men-scan sel tersebut. Pada awalnya, tape head berada pada sel paling kiri yang menampung input.</li>
+            </ul>
+          </p>
+          <br>
+
+          <hr color="purple" size="50" noshade align="center" width="900px">
+          <br>
       
-        <br>
+          <p class=" text-center title-text">
+            <b>Contoh Penerepan Mesin Turing</b>
+          </p>
+            <p style="text-align:justify;">
+              Sebuah program sederhana, Dengan simbol "1 1 0" tercetak pada tape, mari kita coba untuk mengubah 1s menjadi 0 dan sebaliknya. 
+              Ini disebut inversi bit, karena 1s dan 0s adalah bit dalam biner. Ini dapat dilakukan dengan meneruskan 
+              instruksi berikut ke mesin Turing, memanfaatkan kemampuan membaca mesin untuk memutuskan operasi 
+              selanjutnya sendiri. Instruksi ini membuat program sederhana. 
+
+              <table border="1" width="800px" style="margin: auto;" height="150px">
+                <tr align="center" style="background-color: #663399; color: white;">
+                    <th><b>Symbol Read</b></th>
+                    <th><b>Write Instruction</b></th>
+                    <th><b>Move Instruction</b></th>
+                </tr>
+                <tr align="center">
+                    <td>Blank</td>
+                    <td>None</td>
+                    <td>None</td>
+                </tr>
+                <tr align="center">
+                  <td>0</td>
+                  <td>Write 1</td>
+                  <td>Move Tape to the Right</td>
+              </tr>
+              <tr align="center">
+                <td>1</td>
+                <td>Write 0</td>
+                <td>Move Tape to the Right</td>
+            </tr>
+            </table>
+            <br>
+            <p style="text-align: justify;">
+              Mesin pertama-tama akan membaca simbol di bawah head, menulis simbol baru yang sesuai, kemudian 
+              memindahkan pita ke kiri atau ke kanan seperti yang diinstruksikan, sebelum mengulangi urutan 
+              baca-tulis-pindah lagi. <br><br>
+              <img src="img/c1.png" width="50%" height="50%" style="display: block; margin: auto;"> <br>
+            </p>  
+            <p style="text-align: justify;">
+              Simbol saat ini di bawah head adalah 0, jadi ditulis 1 dan memindahkan pita ke kanan dengan satu kotak. 
+              <br><br>
+              <img src="img/c2.png" width="50%" height="50%" style="display: block; margin: auto;"> <br>
+            </p>  
+            <p style="text-align: justify;">
+              Simbol yang sedang dibaca sekarang adalah 1, jadi kita tulis 0 dan pindahkan tape ke kanan sebanyak satu kotak:
+               <br><br>
+              <img src="img/c3.png" width="50%" height="50%" style="display: block; margin: auto;"> <br>
+            </p>  
+            <p style="text-align: justify;">
+              Demikian pula, simbol yang dibaca adalah 1, jadi kami ulangi instruksi yang sama.<br><br>
+              <img src="img/c4.png" width="50%" height="50%" style="display: block; margin: auto;"> <br>
+            </p>  
+            <p style="text-align: justify;">
+              Akhirnya, simbol 'kosong' dibaca, sehingga mesin tidak melakukan apa pun selain membaca simbol kosong 
+              secara terus menerus karena kami telah menginstruksikannya untuk mengulangi urutan baca-tulis-pindah 
+              tanpa berhenti. Nyatanya, programnya belum selesai. Bagaimana mesin mengulangi urutan tanpa henti, 
+              dan bagaimana mesin berhenti menjalankan program? Program tersebut memberitahukannya dengan konsep 
+              machine state.
+            </p>  
+          </p>
+            <br>
+        </div>
+    
           <hr color="purple" size="100" noshade align="center" width="1200px">
 
           <br>
@@ -107,20 +310,22 @@
       </h3>
       <br>
       <p class="text-center" style="text-align:justify;">
-        <a href="https://socs.binus.ac.id/2018/12/20/penyederhanaan-context-free-grammar/">Binus University: Penyederhanaan Context Free Grammar</a>
+        <a href="https://www.geeksforgeeks.org/turing-machine-in-toc/">GeeksForGeeks: Turing Machine in TOC</a>
       </p>
       <p class="text-center" style="text-align:justify;">
-        <a href="https://brilliant.org/wiki/context-free-grammars/">Brilliant: Context Free Grammar</a>
+        <a href="https://docplayer.info/71113728-1-pengertian-mesin-turing-dan-contoh-contoh-mesin-turing.html">Liani Salim: Pengertian dan Contoh Mesin Turing</a>
       </p>
       <p class="text-center" style="text-align:justify;">
-        <a href="https://slideplayer.info/slide/3167272/">Eggy Iqbal: Tata Bahasa Bebas Konteks (Context Free Grammar)</a>
+        <a href="https://www.coursehero.com/file/42838771/MAKALAH-MESIN-TURINGdocx/">Rikardonababan: Makalah Mesin Turing</a>
       </p>
       <p class="text-center" style="text-align:justify;">
-        <a href="http://people.uncw.edu/adharg/courses/csc360/CFGApplications.pdf">Gur Saran Adhar: Applications of Context-Free Grammers</a>
+        <a href="https://informatika.stei.itb.ac.id/~rinaldi.munir/TeoriKomputasi/2014-2015/IF5110%20-%20Mesin%20Turing%20(Bagian%201).pdf">Rinaldi Munir: Mesin Turing (Bagian 1)</a>
       </p>
       <p class="text-center" style="text-align:justify;">
-        <a href="https://www.tutorialspoint.com/automata_theory/context_free_grammar_introduction.htm">Tutorials Point: Context-Free Grammar Introduction</a>
+        <a href="https://www.cl.cam.ac.uk/projects/raspberrypi/tutorials/turing-machine/one.html">Robert Mullins: What is a Turing machine?</a>
       </p>
+      
+     
       
       
       
